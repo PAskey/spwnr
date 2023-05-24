@@ -21,3 +21,4 @@ vis = KO_cnts%>%
 vis = left_join(vis,fence, by = "STREAM_YR")%>%select(-c(STREAM_YR, PEAK_VISUAL))
 
 ##______________________________________________________________________________________________
+#test commit
