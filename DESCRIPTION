@@ -7,7 +7,7 @@ Author@R: c(
     )
 Maintainer: The package maintainer <paul.askey@gofishbc.com>
 Description: This package was created to make the raw data and functions available from Askey et al. 2023 in the Canadian Journal of Fisheries and Aquatic Sciences. 
-Includes data comparing visual counts of Kokanee spawners to census data from spawner fences. 
+    Includes data comparing visual counts of Kokanee spawners to census data from spawner fences. 
 License: None
 Encoding: UTF-8
 LazyData: true
