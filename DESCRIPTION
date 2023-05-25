@@ -10,5 +10,6 @@ Description: This package was created to make the raw data and functions availab
     Includes data comparing visual counts of Kokanee spawners to census data from spawner fences. This allows expansion of standard visual surveys to total abundance estimates.
 License: None
 Encoding: UTF-8
-LazyData: true
+LazyData: false
 URL: https://github.com/PAskey/spwnr
+RoxygenNote: 7.2.3
