@@ -2,14 +2,23 @@ Package: spwnr
 Type: Package
 Title: Spawner data and functions from Askey et al. 2023 CJFAS
 Version: 0.1.0
-Author@R: c(
+Author: c(
     person("Paul", "Askey", email="paul.askey@gofishbc.com", role = c("aut", "cre"))
     )
 Maintainer: The package maintainer <paul.askey@gofishbc.com>
 Description: This package was created to make the raw data and functions available from Askey et al. 2023 in the Canadian Journal of Fisheries and Aquatic Sciences. 
     Includes data comparing visual counts of Kokanee spawners to census data from spawner fences. This allows expansion of standard visual surveys to total abundance estimates.
+Imports: 
+    plyr,
+    magrittr,
+    tidyverse,
+    dplyr,
+    rlang,
+    zoo
+Suggests:
+    sjPlot
 License: None
 Encoding: UTF-8
-LazyData: false
+LazyData: true
 URL: https://github.com/PAskey/spwnr
 RoxygenNote: 7.2.3
