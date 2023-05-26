@@ -71,7 +71,7 @@ all_results = all_results%>%
                 Method = factor(Method, c('PEAK', "TAUC", "GAUC")))
 
 #Summary of within sample fits to data
-table2data = all_results%>%
+table2data <<- all_results%>%
   dplyr::filter(Group_out==0)%>%#, Species == "KOKANEE"
   dplyr::mutate(Beta = exp(Coef))%>%
   dplyr::mutate(round(dplyr::pick(where(is.numeric)),2))%>%
@@ -80,7 +80,7 @@ table2data = all_results%>%
 
 #sjPlot::tab_df(table2data, file = "Table2.doc", digits = 2)
 
-table3data = all_results%>%
+table3data <<- all_results%>%
   dplyr::group_by(Species, Method)%>%
   dplyr::summarize(Beta_range = paste(round(range(exp(Coef)),2),collapse = ", "),
             MEF = mean(pRSQ, na.rm = T),
@@ -143,7 +143,7 @@ for (i in 1:J){
 
 labels = data.frame(label = paste0("~R^{2} == ",round(results$RSQ,2)), COUNT = c(1:9),x = rep(10000,9), y = rep(10000,9))
 
-table4data = results%>%
+table4data <<- results%>%
   dplyr::mutate(round(dplyr::pick(where(is.numeric)),2))
 
 #sjPlot::tab_df(results, file = "Table4.doc", digits = 2)
