@@ -15,7 +15,7 @@
 data_prep <- function(){
 
 #Read in raw data from csv files in data-raw
-All_cnts = read.csv("./SPAWNER_COUNTS.csv")
+#All_cnts = read.csv("./SPAWNER_COUNTS.csv")
 
 Mission_ch = read.csv("./Mission_channel.csv")
 KO_cnts = read.csv("./KO_cnts.csv")
@@ -24,10 +24,10 @@ Pink_data = read.csv("./Pink_data.csv")
 spwnr = read.csv("./spwnr.csv")
 
 #Summarize counts into different visual indices.
-Ind_data = All_cnts%>%
-  dplyr::group_by(SPECIES, STREAM, YEAR)%>%
-  dplyr::summarize(PEAK_COUNT = max(NO_LIVE, na.rm = T), TAUC = spwnr::TAUC(DOY,NO_LIVE), GAUC = spwnr::GAUC(DOY,NO_LIVE))%>%
-  ungroup()
+#Ind_data = All_cnts%>%
+#  dplyr::group_by(SPECIES, STREAM, YEAR)%>%
+#  dplyr::summarize(PEAK_COUNT = max(NO_LIVE, na.rm = T), TAUC = spwnr::TAUC(DOY,NO_LIVE), GAUC = spwnr::GAUC(DOY,NO_LIVE))%>%
+#  ungroup()
 
 #Summarize raw Kokanee counts into different visual indices.
 KO_data = KO_cnts%>%
