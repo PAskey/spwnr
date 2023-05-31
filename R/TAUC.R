@@ -22,5 +22,5 @@
 
 
 TAUC = function(t, obs){
-  0.5*sum((diff(t))*((zoo::rollapply(obs,2,sum))))
+  0.5*sum((diff(t))*((zoo::rollapply(obs,2,sum, na.rm = T))))
 }

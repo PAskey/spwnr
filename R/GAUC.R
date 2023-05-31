@@ -28,8 +28,12 @@ GAUC = function(t,obs, day1 = NULL, lday = NULL, out = 'AUC'){
   if(is.null(lday)) lday <- max(t)
 
   g=glm(obs~t+I(t^2),family=quasipoisson)
+  x=coef(g)
+  F=sqrt(-pi/x[3])*exp(x[1]-x[2]^2/(4*x[3]))
+
   preds = exp(predict(g, data.frame(t = seq(day1, lday))))
 
   if(out == 'AUC'){return(sum(preds))}
+  if(out == 'Millar'){return(F)}
   if(out == 'preds'){return(preds)}
 }

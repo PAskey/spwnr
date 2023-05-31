@@ -37,7 +37,7 @@ for (S in levels(spwnr$SPECIES)){
       lmfits[[i]] <- lm(vis$lFENCE~ 1 + offset(dplyr::pull(vis[,i])))
       Coef[i]<-lmfits[[i]]$coef
 
-#Within sample metrics
+      #Within sample metrics
       sqerr = (vis$FENCE_COUNT - exp(predict(lmfits[[i]])))^2
       sqtot = (vis$FENCE_COUNT - mean(vis$FENCE_COUNT))^2
       RSQ[i] = 1 -  sum(sqerr)/sum(sqtot)
@@ -146,6 +146,6 @@ labels = data.frame(label = paste0("~R^{2} == ",round(results$RSQ,2)), COUNT = c
 table4data <<- results%>%
   dplyr::mutate(round(dplyr::pick(where(is.numeric)),2))
 
-#sjPlot::tab_df(results, file = "Table4.doc", digits = 2)
+#sjPlot::tab_df(table4data, file = "Table4.doc", digits = 2)
 
 }
