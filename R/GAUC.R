@@ -5,9 +5,8 @@
 #' @name GAUC
 #' @param t  an ordered time series of count days
 #' @param obs a series of observed counts of live fish corresponding to each t
-#' @param day1 first day to sum in fish days, an optional parameter if the user wishes to restrict or extend the predictions or summed fish days to a specific period
-#' @param lday last day to sum in fish days, an optional parameter if the user wishes to restrict or extend the predictions or summed fish days to a specific period
-#' @param out  preferred type of output, default "AUC" = total fish day, "preds" returns the time specific predictions (e.g. for plotting)
+#' @param out  preferred type of output, default "AUC" = total fish days, "preds" returns the time specific predictions (e.g. for plotting)
+#' @param preds.t a numeric vector to define predictions t for 'preds' output. Default are the t supplied the GAUC function call.
 #' @keywords GAUC AUC
 #' @export
 #' @examples
@@ -23,17 +22,24 @@
 #' GAUC(t,obs)
 
 
-GAUC = function(t,obs, day1 = NULL, lday = NULL, out = 'AUC'){
-  if(is.null(day1)) day1 <- min(t)
-  if(is.null(lday)) lday <- max(t)
+GAUC = function(t,obs, out = 'AUC', preds.t = NULL){
+#Some risk of unrealistic result if times series is not bracketed by low observations.
+lows = unique(sort(obs))[2]
+first = obs[!is.na(obs)][1]
+last = tail(obs[!is.na(obs)],1)
+  if(!(first<=lows&last<=lows)) warning(
+    "Time series does not start and end with lowest 2 observations.
+     Consider adding 0s to define realistic spawning period.")
 
   g=glm(obs~t+I(t^2),family=quasipoisson)
   x=coef(g)
-  F=sqrt(-pi/x[3])*exp(x[1]-x[2]^2/(4*x[3]))
 
-  preds = exp(predict(g, data.frame(t = seq(day1, lday))))
+  if(out == 'AUC'){
+  F=sqrt(-pi/x[[3]])*exp(x[[1]]-x[[2]]^2/(4*x[[3]]))
+  return(F)}
 
-  if(out == 'AUC'){return(sum(preds))}
-  if(out == 'Millar'){return(F)}
-  if(out == 'preds'){return(preds)}
+  if(out == 'preds'){
+  if(is.null(preds.t)) preds.t <- t
+  preds = exp(predict(g, data.frame(t = preds.t)))
+  return(preds)}
 }

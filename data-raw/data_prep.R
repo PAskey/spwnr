@@ -15,34 +15,46 @@
 data_prep <- function(){
 
 #Read in raw data from csv files in data-raw
-#All_cnts = read.csv("./SPAWNER_COUNTS.csv")
+All_cnts = read.csv("./SPAWNER_COUNTS.csv")%>%
+  dplyr::filter(INCLUDED == 'Y')%>%
+  dplyr::arrange(SPECIES, YEAR, STREAM, DOY)%>%
+  dplyr::mutate(STREAM_YR = paste0(STREAM,"_",YEAR),
+                GROUND_INTERP = replace_na(GROUND_INTERP,0),
+                FENCE_INTERP = replace_na(FENCE_INTERP,0),
+                ADDED_0 = replace_na(ADDED_0,0))
 
-Mission_ch = read.csv("./Mission_channel.csv")
-KO_cnts = read.csv("./KO_cnts.csv")
-KO_fence = read.csv("./KO_fence.csv")
-Pink_data = read.csv("./Pink_data.csv")
-spwnr = read.csv("./spwnr.csv")
 
-#Summarize counts into different visual indices.
-#Ind_data = All_cnts%>%
-#  dplyr::group_by(SPECIES, STREAM, YEAR)%>%
-#  dplyr::summarize(PEAK_COUNT = max(NO_LIVE, na.rm = T), TAUC = spwnr::TAUC(DOY,NO_LIVE), GAUC = spwnr::GAUC(DOY,NO_LIVE))%>%
-#  ungroup()
+spwnr = All_cnts%>%
+  group_by(STREAM_YR, STREAM, YEAR, SPECIES)%>%
+  filter(sum(FENCE_PASS, na.rm = T)>0)%>%
+  summarize(
+    FENCE = sum(FENCE_PASS, na.rm = T)
+  )
 
-#Summarize raw Kokanee counts into different visual indices.
-KO_data = KO_cnts%>%
-  dplyr::group_by(SPECIES = "KOKANEE", STREAM, YEAR)%>%
-  dplyr::summarize(PEAK_COUNT = max(LIVE_COUNT), TAUC = spwnr::TAUC(DOY,LIVE_COUNT), GAUC = spwnr::GAUC(DOY,LIVE_COUNT))%>%
-  ungroup()
+ground = All_cnts%>%
+  group_by(STREAM_YR)%>%
+  filter(STREAM_YR%in%spwnr$STREAM_YR, !is.na(GROUND_LIVE))%>%
+  rename(Obs = GROUND_LIVE)%>%
+  summarize(
+    Peak = max(Obs, na.rm = T),
+    TAUC = TAUC(DOY,Obs),
+    GAUC = GAUC(DOY,Obs)
+  )%>%
+  mutate(Method = 'GROUND')
 
-KO_data = dplyr::full_join(KO_data, KO_fence, by = c('STREAM',"YEAR"))
+air = All_cnts%>%
+  group_by(STREAM_YR)%>%
+  filter(!is.na(AIR_LIVE))%>%
+  rename(Obs = AIR_LIVE)%>%
+  summarize(
+    Peak = max(Obs, na.rm = T),
+    TAUC = TAUC(DOY,Obs),
+    GAUC = GAUC(DOY,Obs)
+  )%>%
+  mutate(Method = 'AIR')
 
-#Pink data escapement needs to be converted to fish days to be comparable to KO
-Pink_data = Pink_data%>%
-  dplyr::mutate(SPECIES = "PINK", TAUC = TAUC_E*l*v, GAUC = GAUC_E*l*v)%>%
-  dplyr::select(-c(l,v,TAUC_E, HARR_E, GAUC_E))
-
-spwnr = dplyr::full_join(KO_data,Pink_data)
+methods = rbind(ground, air)
+spwnr = right_join(spwnr,methods)%>%ungroup()
 
 #Create fitting groups for cross validation testing
 creek_groups = data.frame(
@@ -54,9 +66,35 @@ creek_groups = data.frame(
 spwnr = dplyr::left_join(spwnr, creek_groups, by = 'STREAM')%>%
   dplyr::mutate(SPECIES = as.factor(SPECIES))
 
+
+
+#Mission_ch = read.csv("./Mission_channel.csv")
+#KO_cnts = read.csv("./KO_cnts.csv")
+#KO_fence = read.csv("./KO_fence.csv")
+#Pink_data = read.csv("./Pink_data.csv")
+#spwnr = read.csv("./spwnr.csv")
+
+#Summarize raw Kokanee counts into different visual indices.
+#KO_data = KO_cnts%>%
+#  dplyr::group_by(SPECIES = "KOKANEE", STREAM, YEAR)%>%
+#  dplyr::summarize(PEAK_COUNT = max(LIVE_COUNT), TAUC = spwnr::TAUC(DOY,LIVE_COUNT), GAUC = spwnr::GAUC(DOY,LIVE_COUNT))%>%
+#  ungroup()
+
+#KO_data = dplyr::full_join(KO_data, KO_fence, by = c('STREAM',"YEAR"))
+
+#Pink data escapement needs to be converted to fish days to be comparable to KO
+#Pink_data = Pink_data%>%
+#  dplyr::mutate(SPECIES = "PINK", TAUC = TAUC_E*l*v, GAUC = GAUC_E*l*v)%>%
+#  dplyr::select(-c(l,v,TAUC_E, HARR_E, GAUC_E))
+
+#spwnr = dplyr::full_join(KO_data,Pink_data)
+
+
+
 #SAve .rda files to data folder
-save(Mission_ch, file = "../data/Mission_ch.rda")
+save(All_cnts, file = "../data/All_cnts.rda")
+#save(Mission_ch, file = "../data/Mission_ch.rda")
 save(spwnr, file = "../data/spwnr.rda")
-save(KO_cnts, file = "../data/KO_cnts.rda")
+#save(KO_cnts, file = "../data/KO_cnts.rda")
 }
 
