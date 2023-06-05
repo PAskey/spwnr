@@ -4,18 +4,16 @@
 \alias{GAUC}
 \title{GAUC}
 \usage{
-GAUC(t, obs, day1 = NULL, lday = NULL, out = "AUC")
+GAUC(t, obs, out = "AUC", preds.t = NULL)
 }
 \arguments{
 \item{t}{an ordered time series of count days}
 
 \item{obs}{a series of observed counts of live fish corresponding to each t}
 
-\item{day1}{first day to sum in fish days, an optional parameter if the user wishes to restrict or extend the predictions or summed fish days to a specific period}
+\item{out}{preferred type of output, default "AUC" = total fish days, "preds" returns the time specific predictions (e.g. for plotting)}
 
-\item{lday}{last day to sum in fish days, an optional parameter if the user wishes to restrict or extend the predictions or summed fish days to a specific period}
-
-\item{out}{preferred type of output, default "AUC" = total fish day, "preds" returns the time specific predictions (e.g. for plotting)}
+\item{preds.t}{a numeric vector to define predictions t for 'preds' output. Default are the t supplied the GAUC function call.}
 }
 \description{
 A function to estimate the GAUC from a time series of spawner counts

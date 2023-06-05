@@ -19,42 +19,43 @@ All_cnts = read.csv("./SPAWNER_COUNTS.csv")%>%
   dplyr::filter(INCLUDED == 'Y')%>%
   dplyr::arrange(SPECIES, YEAR, STREAM, DOY)%>%
   dplyr::mutate(STREAM_YR = paste0(STREAM,"_",YEAR),
-                GROUND_INTERP = replace_na(GROUND_INTERP,0),
-                FENCE_INTERP = replace_na(FENCE_INTERP,0),
-                ADDED_0 = replace_na(ADDED_0,0))
+                GROUND_INTERP = tidyr::replace_na(GROUND_INTERP,0),
+                FENCE_INTERP = tidyr::replace_na(FENCE_INTERP,0),
+                ADDED_0 = tidyr::replace_na(ADDED_0,0))
 
 
 spwnr = All_cnts%>%
-  group_by(STREAM_YR, STREAM, YEAR, SPECIES)%>%
-  filter(sum(FENCE_PASS, na.rm = T)>0)%>%
-  summarize(
+  dplyr::group_by(STREAM_YR, STREAM, YEAR, SPECIES)%>%
+  dplyr::filter(sum(FENCE_PASS, na.rm = T)>0)%>%
+  dplyr::summarize(
     FENCE = sum(FENCE_PASS, na.rm = T)
   )
 
 ground = All_cnts%>%
-  group_by(STREAM_YR)%>%
-  filter(STREAM_YR%in%spwnr$STREAM_YR, !is.na(GROUND_LIVE))%>%
-  rename(Obs = GROUND_LIVE)%>%
-  summarize(
-    Peak = max(Obs, na.rm = T),
+  dplyr::group_by(STREAM_YR)%>%
+  dplyr::filter(STREAM_YR%in%spwnr$STREAM_YR, !is.na(GROUND_LIVE))%>%
+  dplyr::rename(Obs = GROUND_LIVE)%>%
+  dplyr::summarize(
+    PEAK_COUNT = max(Obs, na.rm = T),
     TAUC = TAUC(DOY,Obs),
     GAUC = GAUC(DOY,Obs)
   )%>%
-  mutate(Method = 'GROUND')
+  dplyr::mutate(Method = 'GROUND')
 
 air = All_cnts%>%
-  group_by(STREAM_YR)%>%
-  filter(!is.na(AIR_LIVE))%>%
-  rename(Obs = AIR_LIVE)%>%
-  summarize(
-    Peak = max(Obs, na.rm = T),
+  dplyr::group_by(STREAM_YR)%>%
+  dplyr::filter(!is.na(AIR_LIVE))%>%
+  dplyr::rename(Obs = AIR_LIVE)%>%
+  dplyr::summarize(
+    PEAK_COUNT= max(Obs, na.rm = T),
     TAUC = TAUC(DOY,Obs),
     GAUC = GAUC(DOY,Obs)
   )%>%
-  mutate(Method = 'AIR')
+  dplyr::mutate(Method = 'AIR')
 
 methods = rbind(ground, air)
-spwnr = right_join(spwnr,methods)%>%ungroup()
+spwnr_ests = dplyr::right_join(spwnr,methods)%>%
+  dplyr::ungroup()
 
 #Create fitting groups for cross validation testing
 creek_groups = data.frame(
@@ -63,10 +64,10 @@ creek_groups = data.frame(
              "REDFISH"),
   fit_group = c(1,1,1,1,2,2,2,3,3,2,3,3))
 
-spwnr = dplyr::left_join(spwnr, creek_groups, by = 'STREAM')%>%
+spwnr_ests = dplyr::left_join(spwnr_ests, creek_groups, by = 'STREAM')%>%
   dplyr::mutate(SPECIES = as.factor(SPECIES))
 
-
+rm(air, ground, spwnr)
 
 #Mission_ch = read.csv("./Mission_channel.csv")
 #KO_cnts = read.csv("./KO_cnts.csv")
@@ -94,7 +95,7 @@ spwnr = dplyr::left_join(spwnr, creek_groups, by = 'STREAM')%>%
 #SAve .rda files to data folder
 save(All_cnts, file = "../data/All_cnts.rda")
 #save(Mission_ch, file = "../data/Mission_ch.rda")
-save(spwnr, file = "../data/spwnr.rda")
+save(spwnr_ests, file = "../data/spwnr_ests.rda")
 #save(KO_cnts, file = "../data/KO_cnts.rda")
 }
 

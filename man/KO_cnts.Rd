@@ -19,7 +19,7 @@ A data frame with 145 rows and 9 variables:
 }
 }
 \source{
-PAskey personal copy with .csv stored in data-raw. Obatained from BC provincial government fisheries staff in Penticton.
+PAskey personal copy with .csv stored in data-raw. Obtained from BC provincial government fisheries staff in Penticton.
 }
 \usage{
 KO_cnts

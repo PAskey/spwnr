@@ -23,13 +23,14 @@
 
 TAUC = function(t, obs){
 
-  if (is.unsorted(t)|any(is.na(t))) {
-    stop("Check time data: unordered or has NAs")
+  if (is.unsorted(t)|any(is.na(t))|obs[which.min(t)]>0|obs[which.max(t)]>0) {
+    warning("Check data: unordered t, has NAs ,or series not bracketed with 0s")
   }
 
-  #Remove NA values in observations
-  t = t[!is.na(obs)]
-  obs = obs[!is.na(obs)]
+  #Remove NA values in observations and sort
+  sorted = order(t[!is.na(obs)])
+  t = t[sorted]
+  obs = obs[sorted]
 
 
   0.5*sum((diff(t))*((zoo::rollapply(obs,2,sum, na.rm = T))))
