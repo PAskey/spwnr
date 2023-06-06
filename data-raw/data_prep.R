@@ -16,12 +16,18 @@ data_prep <- function(){
 
 #Read in raw data from csv files in data-raw
 All_cnts = read.csv("./SPAWNER_COUNTS.csv")%>%
-  dplyr::filter(INCLUDED == 'Y')%>%
+  dplyr::filter(INCLUDED == 'Y')%>%#Stream data that were QC'd and included in previous publications
   dplyr::arrange(SPECIES, YEAR, STREAM, DOY)%>%
   dplyr::mutate(STREAM_YR = paste0(STREAM,"_",YEAR),
                 GROUND_INTERP = tidyr::replace_na(GROUND_INTERP,0),
                 FENCE_INTERP = tidyr::replace_na(FENCE_INTERP,0),
                 ADDED_0 = tidyr::replace_na(ADDED_0,0))
+
+#Create a simulation of KOkanee type counting frequency for Pink ground data
+ko = c(182,seq(220,252, by = 4))#Every 4th day starting on day 220. Assume 0 on day 182 similar to KO assumptions.
+
+All_cnts = All_cnts%>%
+  dplyr::mutate(KO_sim = dplyr::if_else(SPECIES == 'PINK'&DOY%in%ko|SPECIES == 'KOKANEE',1,0))
 
 
 spwnr = All_cnts%>%
@@ -33,7 +39,7 @@ spwnr = All_cnts%>%
 
 ground = All_cnts%>%
   dplyr::group_by(STREAM_YR)%>%
-  dplyr::filter(STREAM_YR%in%spwnr$STREAM_YR, !is.na(GROUND_LIVE))%>%
+  dplyr::filter(STREAM_YR%in%spwnr$STREAM_YR, !is.na(GROUND_LIVE), KO_sim == 1)%>%
   dplyr::rename(Obs = GROUND_LIVE)%>%
   dplyr::summarize(
     PEAK_COUNT = max(Obs, na.rm = T),
