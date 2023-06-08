@@ -1139,7 +1139,9 @@ KOKANEE,OKANAGAN,MISSION,E,37899,2003,10,5,166,,,,CHANNEL,,,,,,278,Y
 KOKANEE,OKANAGAN,MISSION,E,37901,2003,10,7,45,,,,CHANNEL,,,,,,280,Y
 KOKANEE,OKANAGAN,MISSION,E,38231,2004,9,1,23,,,,CHANNEL,,,,,,245,Y
 KOKANEE,OKANAGAN,MISSION,E,38233,2004,9,3,323,,,,CHANNEL,,,,,,247,Y
+KOKANEE,OKANAGAN,MISSION,E,38234,2004,9,4,917,,,,Missing count day. Interpolated,,,1,,,248,Y
 KOKANEE,OKANAGAN,MISSION,E,38235,2004,9,5,1511,,,,CHANNEL,,,,,,249,Y
+KOKANEE,OKANAGAN,MISSION,E,38236,2004,9,6,3019.5,,,,Missing count day. Interpolated,,,1,,,250,Y
 KOKANEE,OKANAGAN,MISSION,E,38237,2004,9,7,4528,,,,CHANNEL,,,,,,251,Y
 KOKANEE,OKANAGAN,MISSION,E,38238,2004,9,8,4612,,,14,,,,,,,252,Y
 KOKANEE,OKANAGAN,MISSION,E,38239,2004,9,9,4527,,,,CHANNEL,,,,,,253,Y
@@ -1164,6 +1166,8 @@ KOKANEE,OKANAGAN,MISSION,E,38257,2004,9,27,422,,,,CHANNEL,,,,,,271,Y
 KOKANEE,OKANAGAN,MISSION,E,38258,2004,9,28,984,,,8,,,,,,,272,Y
 KOKANEE,OKANAGAN,MISSION,E,38259,2004,9,29,141,,,,CHANNEL,,,,,,273,Y
 KOKANEE,OKANAGAN,MISSION,E,38260,2004,9,30,70,,,,CHANNEL,,,,,,274,Y
+KOKANEE,OKANAGAN,MISSION,E,38260,2004,10,1,53.66666667,,,,Missing count day interpolated,,,1,,,275,Y
+KOKANEE,OKANAGAN,MISSION,E,38260,2004,10,2,37.33333333,,,,Missing count day interpolated,,,1,,,276,Y
 KOKANEE,OKANAGAN,MISSION,E,38263,2004,10,3,21,,,,CHANNEL,,,,,,277,Y
 KOKANEE,OKANAGAN,MISSION,E,38596,2005,9,1,0,,,,CHANNEL,,,,,,244,Y
 KOKANEE,OKANAGAN,MISSION,E,38598,2005,9,3,13,,,,CHANNEL,,,,,,246,Y
@@ -1484,16 +1488,16 @@ KOKANEE,OKANAGAN,MISSION,E,41549,2013,10,2,576,201,,,CHANNEL,,,,,,275,Y
 KOKANEE,OKANAGAN,MISSION,E,41550,2013,10,3,392,156,,,CHANNEL,,,,,,276,Y
 KOKANEE,OKANAGAN,MISSION,E,41551,2013,10,4,410,104,,8,,,,,,,277,Y
 KOKANEE,OKANAGAN,MISSION,E,41552,2013,10,5,266,111,,,CHANNEL,,,,,,278,Y
-KOKANEE,OKANAGAN,MISSION,E,41890,2014,9,8,650,0,,11,,,,,,,251,Y
-KOKANEE,OKANAGAN,MISSION,E,41894,2014,9,12,1817,5,,12,,,,,,,255,Y
-KOKANEE,OKANAGAN,MISSION,E,41896,2014,9,14,2207,11,,13,,,,,,,257,Y
-KOKANEE,OKANAGAN,MISSION,E,41898,2014,9,16,2670,15,,11,,,,,,,259,Y
-KOKANEE,OKANAGAN,MISSION,E,41900,2014,9,18,3087,44,,13,,,,,,,261,Y
-KOKANEE,OKANAGAN,MISSION,E,41902,2014,9,20,3010,69,,13,,,,,,,263,Y
-KOKANEE,OKANAGAN,MISSION,E,41904,2014,9,22,2072,454,,13,,,,,,,265,Y
-KOKANEE,OKANAGAN,MISSION,E,41906,2014,9,24,1220,320,,12,,,,,,,267,Y
-KOKANEE,OKANAGAN,MISSION,E,41908,2014,9,26,750,305,,11,,,,,,,269,Y
-KOKANEE,OKANAGAN,MISSION,E,41910,2014,9,28,310,195,,10,,,,,,,271,Y
+KOKANEE,OKANAGAN,MISSION,E,41890,2014,9,8,650,0,,11,,,,,,,251,N
+KOKANEE,OKANAGAN,MISSION,E,41894,2014,9,12,1817,5,,12,,,,,,,255,N
+KOKANEE,OKANAGAN,MISSION,E,41896,2014,9,14,2207,11,,13,,,,,,,257,N
+KOKANEE,OKANAGAN,MISSION,E,41898,2014,9,16,2670,15,,11,,,,,,,259,N
+KOKANEE,OKANAGAN,MISSION,E,41900,2014,9,18,3087,44,,13,,,,,,,261,N
+KOKANEE,OKANAGAN,MISSION,E,41902,2014,9,20,3010,69,,13,,,,,,,263,N
+KOKANEE,OKANAGAN,MISSION,E,41904,2014,9,22,2072,454,,13,,,,,,,265,N
+KOKANEE,OKANAGAN,MISSION,E,41906,2014,9,24,1220,320,,12,,,,,,,267,N
+KOKANEE,OKANAGAN,MISSION,E,41908,2014,9,26,750,305,,11,,,,,,,269,N
+KOKANEE,OKANAGAN,MISSION,E,41910,2014,9,28,310,195,,10,,,,,,,271,N
 KOKANEE,OKANAGAN,MISSION,E,42248,2015,9,1,677,0,,,,,,,,,244,Y
 KOKANEE,OKANAGAN,MISSION,E,42249,2015,9,2,1168,5,,,,,,,,,245,Y
 KOKANEE,OKANAGAN,MISSION,E,42250,2015,9,3,1562,3,,,,,,,,,246,Y
@@ -1506,7 +1510,7 @@ KOKANEE,OKANAGAN,MISSION,E,42256,2015,9,9,5095,12,,,POOR VIS,,,,,,252,Y
 KOKANEE,OKANAGAN,MISSION,E,42257,2015,9,10,5406,24,,,,,,,,,253,Y
 KOKANEE,OKANAGAN,MISSION,E,42258,2015,9,11,4700,33,,15,,,,,,,254,Y
 KOKANEE,OKANAGAN,MISSION,E,42259,2015,9,12,4065,8,,,,,,,,,255,Y
-KOKANEE,OKANAGAN,MISSION,E,42260,2015,9,13,4650,152.5,,,,,,1,,,256,Y
+KOKANEE,OKANAGAN,MISSION,E,42260,2015,9,13,4650,152.5,,,Missing count day. Interpolated ,,,1,,,256,Y
 KOKANEE,OKANAGAN,MISSION,E,42261,2015,9,14,5235,297,,11,,,,,,,257,Y
 KOKANEE,OKANAGAN,MISSION,E,42262,2015,9,15,4610,410,,,,,,,,,258,Y
 KOKANEE,OKANAGAN,MISSION,E,42263,2015,9,16,3690,625,,13,,,,,,,259,Y
@@ -1641,7 +1645,7 @@ KOKANEE,OKANAGAN,MISSION,E,43746,2019,10,8,273,480,,,SPAWNING CHANNEL,,,,,,281,Y
 KOKANEE,OKANAGAN,PENTICTON,ALL,42246,2015,8,30,0,,,,ADDED_0 start and end to KOKANEE to close off AUC ests,0,,,1,1,242,Y
 KOKANEE,OKANAGAN,PENTICTON,ALL,42247,2015,8,31,,,,,,51.28572857,,,1,,243,Y
 KOKANEE,OKANAGAN,PENTICTON,ALL,42248,2015,9,1,,,,,,102.5714571,,,1,,244,Y
-KOKANEE,OKANAGAN,PENTICTON,ALL,42249,2015,9,2,,,,,359 fish observed above fence after install on Sept. 2. Interpolated as entering since Aug. 30,205.1429143,,,1,,245,Y
+KOKANEE,OKANAGAN,PENTICTON,ALL,42249,2015,9,2,,,,,359 fish observed above fence after install on Sept. 2. Interpolated as entering since Aug. 31,205.1429143,,,1,,245,Y
 KOKANEE,OKANAGAN,PENTICTON,ALL,42250,2015,9,3,,,,,"116 more fish entered fence trap, but not included in count as taken for brood",229,,,,,246,Y
 KOKANEE,OKANAGAN,PENTICTON,ALL,42251,2015,9,4,,,,,"110 more fish entered fence trap, but not included in count as taken for brood",261,,,,,247,Y
 KOKANEE,OKANAGAN,PENTICTON,ALL,42252,2015,9,5,,,,,,435,,,,,248,Y
@@ -1712,7 +1716,7 @@ KOKANEE,OKANAGAN,PENTICTON,ALL,43376,2018,10,3,,,,,Fish passed at night and morn
 KOKANEE,OKANAGAN,PENTICTON,ALL,43377,2018,10,4,,,,,Fish passed at night and mornings. Number reflects total passed by date (only a portion might be visible at time of bank counts)upstream and visible during the day period that day.,4,,,,,277,Y
 KOKANEE,OKANAGAN,PENTICTON,ALL,43378,2018,10,5,,,,,Fish passed at night and mornings. Number reflects total passed by date (only a portion might be visible at time of bank counts)upstream and visible during the day period that day.,2,,,1,,278,Y
 KOKANEE,OKANAGAN,PENTICTON,ALL,43379,2018,10,6,,,,,Fish passed at night and mornings. Number reflects total passed by date (only a portion might be visible at time of bank counts)upstream and visible during the day period that day.,1,,,1,,279,Y
-KOKANEE,OKANAGAN,PENTICTON,ALL,43705,2019,8,28,,,,,Fish passed at night and mornings. Number reflects total passed by date (only a portion might be visible at time of bank counts)upstream and visible during the day period that day.,2,,,1,,240,Y
+KOKANEE,OKANAGAN,PENTICTON,ALL,43705,2019,8,28,,,,,Fence install day (Bill Wicket had seen two early Kokanee below fish ladder before install),2,,,1,,240,Y
 KOKANEE,OKANAGAN,PENTICTON,ALL,43706,2019,8,29,,,,,Fish passed at night and mornings. Number reflects total passed by date (only a portion might be visible at time of bank counts)upstream and visible during the day period that day.,0,,,,,241,Y
 KOKANEE,OKANAGAN,PENTICTON,ALL,43707,2019,8,30,0,,,,Fish passed at night and mornings. Number reflects total passed by date (only a portion might be visible at time of bank counts)upstream and visible during the day period that day.,0,,,,1,242,Y
 KOKANEE,OKANAGAN,PENTICTON,ALL,43708,2019,8,31,,,,,Fish passed at night and mornings. Number reflects total passed by date (only a portion might be visible at time of bank counts)upstream and visible during the day period that day.,0,,,,,243,Y
@@ -2062,8 +2066,8 @@ KOKANEE,KALAMALKA,COLDSTREAM,A-F,44110,2020,10,6,,,,,,497,,,,,279,Y
 KOKANEE,KALAMALKA,COLDSTREAM,A-F,44111,2020,10,7,3408,122,,9,,208,,,,,280,Y
 KOKANEE,KALAMALKA,COLDSTREAM,A-F,44112,2020,10,8,,,,,,393,,,,,281,Y
 KOKANEE,KALAMALKA,COLDSTREAM,A-F,44113,2020,10,9,,,,,,303,,,,,282,Y
-KOKANEE,KALAMALKA,COLDSTREAM,A-F,44114,2020,10,10,3932,251,,8,"Fence blow out during night 10th, interpolate night count",413.5,,,1,,283,Y
-KOKANEE,KALAMALKA,COLDSTREAM,A-F,44115,2020,10,11,,,,,"Fence blow out during night 10th, interpolate morning count",493,,,1,,284,Y
+KOKANEE,KALAMALKA,COLDSTREAM,A-F,44114,2020,10,10,3932,251,,8,"Fence blow out during night 10th, interpolate night count 10th and morning count 7th",413.5,,,1,,283,Y
+KOKANEE,KALAMALKA,COLDSTREAM,A-F,44115,2020,10,11,,,,,"Fence blow out during night 10th, interpolate night count 10th and morning count 7th",493,,,1,,284,Y
 KOKANEE,KALAMALKA,COLDSTREAM,A-F,44116,2020,10,12,,,,,,262,,,,,285,Y
 KOKANEE,KALAMALKA,COLDSTREAM,A-F,44117,2020,10,13,2366,288,,9,,146,,,,,286,Y
 KOKANEE,KALAMALKA,COLDSTREAM,A-F,44118,2020,10,14,,,,,,210,,,,,287,Y
@@ -2107,14 +2111,14 @@ KOKANEE,KALAMALKA,COLDSTREAM,A-F,44484,2021,10,15,4158,161,,7,,516,,,,,287,Y
 KOKANEE,KALAMALKA,COLDSTREAM,A-F,44485,2021,10,16,,,,,,557,,,,,288,Y
 KOKANEE,KALAMALKA,COLDSTREAM,A-F,44486,2021,10,17,,,,,,665,,,,,289,Y
 KOKANEE,KALAMALKA,COLDSTREAM,A-F,44487,2021,10,18,4423,390,,8,,216,,,,,290,Y
-KOKANEE,KALAMALKA,COLDSTREAM,A-F,44488,2021,10,19,,,,,Fence pulled due to budget interpolate decline to 0 on DOY 298,189,,,1,,291,Y
-KOKANEE,KALAMALKA,COLDSTREAM,A-F,44489,2021,10,20,,,,,Fence pulled due to budget interpolate decline to 0 on DOY 299,162,,,1,,292,Y
-KOKANEE,KALAMALKA,COLDSTREAM,A-F,44490,2021,10,21,,,,,Fence pulled due to budget interpolate decline to 0 on DOY 300,135,,,1,,293,Y
-KOKANEE,KALAMALKA,COLDSTREAM,A-F,44491,2021,10,22,,,,,Fence pulled due to budget interpolate decline to 0 on DOY 301,108,,,1,,294,Y
-KOKANEE,KALAMALKA,COLDSTREAM,A-F,44492,2021,10,23,3721,364,,7,Fence pulled due to budget interpolate decline to 0 on DOY 302,81,,,1,,295,Y
-KOKANEE,KALAMALKA,COLDSTREAM,A-F,44493,2021,10,24,,,,,Fence pulled due to budget interpolate decline to 0 on DOY 303,54,,,1,,296,Y
-KOKANEE,KALAMALKA,COLDSTREAM,A-F,44494,2021,10,25,,,,,Fence pulled due to budget interpolate decline to 0 on DOY 304,27,,,1,,297,Y
-KOKANEE,KALAMALKA,COLDSTREAM,A-F,44495,2021,10,26,,,,,Fence pulled due to budget interpolate decline to 0 on DOY 305,0,,,1,,298,Y
+KOKANEE,KALAMALKA,COLDSTREAM,A-F,44488,2021,10,19,,,,,Fence pulled due to budget interpolate decline to 0 on Oct. 26,189,,,1,,291,Y
+KOKANEE,KALAMALKA,COLDSTREAM,A-F,44489,2021,10,20,,,,,Fence pulled due to budget interpolate decline to 0 on Oct. 26,162,,,1,,292,Y
+KOKANEE,KALAMALKA,COLDSTREAM,A-F,44490,2021,10,21,,,,,Fence pulled due to budget interpolate decline to 0 on Oct. 26,135,,,1,,293,Y
+KOKANEE,KALAMALKA,COLDSTREAM,A-F,44491,2021,10,22,,,,,Fence pulled due to budget interpolate decline to 0 on Oct. 26,108,,,1,,294,Y
+KOKANEE,KALAMALKA,COLDSTREAM,A-F,44492,2021,10,23,3721,364,,7,Fence pulled due to budget interpolate decline to 0 on Oct. 26,81,,,1,,295,Y
+KOKANEE,KALAMALKA,COLDSTREAM,A-F,44493,2021,10,24,,,,,Fence pulled due to budget interpolate decline to 0 on Oct. 26,54,,,1,,296,Y
+KOKANEE,KALAMALKA,COLDSTREAM,A-F,44494,2021,10,25,,,,,Fence pulled due to budget interpolate decline to 0 on Oct. 26,27,,,1,,297,Y
+KOKANEE,KALAMALKA,COLDSTREAM,A-F,44495,2021,10,26,,,,,Fence pulled due to budget interpolate decline to 0 on Oct. 26,0,,,1,,298,Y
 KOKANEE,KALAMALKA,COLDSTREAM,A-F,44819,2022,9,15,,,,,,0,,,,,257,Y
 KOKANEE,KALAMALKA,COLDSTREAM,A-F,44820,2022,9,16,,,,,,0,,,,,258,Y
 KOKANEE,KALAMALKA,COLDSTREAM,A-F,44821,2022,9,17,,,,,,0,,,,,259,Y
@@ -2155,58 +2159,58 @@ KOKANEE,KALAMALKA,COLDSTREAM,A-F,44855,2022,10,21,,,,,,264,,,,,293,Y
 KOKANEE,KALAMALKA,COLDSTREAM,A-F,44856,2022,10,22,,,,,,289,,,,,294,Y
 KOKANEE,KALAMALKA,COLDSTREAM,A-F,44857,2022,10,23,2367,532,,6,,199,,,,,295,Y
 KOKANEE,KALAMALKA,COLDSTREAM,A-F,44858,2022,10,24,,,,,,109,,,,,296,Y
-KOKANEE,KALAMALKA,COLDSTREAM,A-F,44859,2022,10,25,,,,,Fence out with >100 fish interpolate to day 298,54.5,,,1,,297,Y
-KOKANEE,KALAMALKA,COLDSTREAM,A-F,44860,2022,10,26,,,,,Fence out with >100 fish interpolate to day 299,0,,,1,,298,Y
-KOKANEE,WOOD,MIDDLE_VERNON,B-D,40804,2011,9,18,0,,,,ADDED_0,,,1,,1,260,Y
-KOKANEE,WOOD,MIDDLE_VERNON,B-D,40849,2011,11,2,0,,,,ADDED_0,,,1,,1,305,Y
-KOKANEE,WOOD,MIDDLE_VERNON,B-D,41535,2013,9,18,0,,,,ADDED_0,,,1,,1,260,Y
-KOKANEE,WOOD,MIDDLE_VERNON,B-D,41580,2013,11,2,0,,,,ADDED_0,,,1,,1,305,Y
-KOKANEE,WOOD,MIDDLE_VERNON,B-D,41900,2014,9,18,0,,,,ADDED_0,,,1,,1,260,Y
-KOKANEE,WOOD,MIDDLE_VERNON,B-D,41945,2014,11,2,0,,,,ADDED_0,,,1,,1,305,Y
-KOKANEE,WOOD,MIDDLE_VERNON,B-D,42265,2015,9,18,0,,,,ADDED_0,,,1,,1,260,Y
-KOKANEE,WOOD,MIDDLE_VERNON,B-D,42310,2015,11,2,0,,,,ADDED_0,,,1,,1,305,Y
-KOKANEE,WOOD,MIDDLE_VERNON,B-D,42630,2016,9,17,0,,,,ADDED_0,,,1,,1,260,Y
-KOKANEE,WOOD,MIDDLE_VERNON,B-D,42675,2016,11,1,0,,,,ADDED_0,,,1,,1,305,Y
-KOKANEE,WOOD,MIDDLE_VERNON,B-D,42995,2017,9,17,0,,,,ADDED_0,,,1,,1,259,Y
-KOKANEE,WOOD,MIDDLE_VERNON,B-D,43040,2017,11,1,0,,,,ADDED_0,,,1,,1,304,Y
-KOKANEE,KALAMALKA,COLDSTREAM,ALL,43723,2019,9,15,0,,,,ADDED_0,,,1,,1,257,Y
-KOKANEE,KALAMALKA,COLDSTREAM,ALL,43768,2019,10,30,0,,,,ADDED_0,,,1,,1,302,Y
-KOKANEE,KALAMALKA,COLDSTREAM,ALL,44089,2020,9,15,0,,,,ADDED_0,,,1,,1,258,Y
-KOKANEE,KALAMALKA,COLDSTREAM,ALL,44134,2020,10,30,0,,,,ADDED_0,,,1,,1,303,Y
-KOKANEE,KALAMALKA,COLDSTREAM,ALL,44454,2021,9,15,0,,,,ADDED_0,,,1,,1,257,Y
-KOKANEE,KALAMALKA,COLDSTREAM,ALL,44499,2021,10,30,0,,,,ADDED_0,,,1,,1,302,Y
-KOKANEE,KALAMALKA,COLDSTREAM,ALL,44819,2022,9,15,0,,,,ADDED_0,,,1,,1,257,Y
-KOKANEE,KALAMALKA,COLDSTREAM,ALL,44864,2022,10,30,0,,,,ADDED_0,,,1,,1,302,Y
-KOKANEE,KOOTENAY,REDFISH,ALL,44053,2020,8,10,0,,,,ADDED_0 start and end to KOKANEE to close off AUC ests,,,1,,1,223,Y
-KOKANEE,KOOTENAY,REDFISH,ALL,44099,2020,9,25,0,,,,ADDED_0 start and end to KOKANEE to close off AUC ests,,,1,,1,269,Y
-KOKANEE,OKANAGAN,PENTICTON,ALL,42287,2015,10,10,0,,,,ADDED_0 start and end to KOKANEE to close off AUC ests,,,1,,1,283,Y
-KOKANEE,OKANAGAN,PENTICTON,ALL,43383,2018,10,10,0,,,,ADDED_0 start and end to KOKANEE to close off AUC ests,,,1,,1,283,Y
-KOKANEE,OKANAGAN,PENTICTON,ALL,43748,2019,10,10,0,,,,ADDED_0 start and end to KOKANEE to close off AUC ests,,,1,,1,283,Y
-PINK,PACIFIC OCEAN,IRISH,76,33144,1990,9,28,0,,,,ADDED_0 to close off AUC ests,,0,1,,1,271,Y
-PINK,PACIFIC OCEAN,TOTEMOFF,621,33144,1990,9,28,0,,,,ADDED_0 to close off AUC ests,,0,1,,1,271,"N dead > fence, so fence must have been breached, see Bue et al 1998 p 244"
-PINK,PACIFIC OCEAN,HERRING,692,33144,1990,9,28,0,,,,ADDED_0 to close off AUC ests,,0,1,,1,271,Y
-PINK,PACIFIC OCEAN,CATHEAD,699,33144,1990,9,28,0,,,,ADDED_0 to close off AUC ests,,0,1,,1,271,Y
-PINK,PACIFIC OCEAN,IRISH,76,33509,1991,9,28,0,,,,ADDED_0 to close off AUC ests,,0,1,,1,271,Y
-PINK,PACIFIC OCEAN,LOOMIS,506,33509,1991,9,28,0,,,,ADDED_0 to close off AUC ests,,0,1,,1,271,Y
-PINK,PACIFIC OCEAN,TOTEMOFF,621,33509,1991,9,28,0,,,,ADDED_0 to close off AUC ests,,0,1,,1,271,"N dead > fence, so fence must have been breached, see Bue et al 1998 p 244"
-PINK,PACIFIC OCEAN,CHENEGA,628,33509,1991,9,28,0,,,,ADDED_0 to close off AUC ests,,0,1,,1,271,Y
-PINK,PACIFIC OCEAN,COUNTESS,637,33509,1991,9,28,0,,,,ADDED_0 to close off AUC ests,,0,1,,1,271,Y
+KOKANEE,KALAMALKA,COLDSTREAM,A-F,44859,2022,10,25,,,,,Fence out with >100 fish interpolate to 0 on Oct. 26,54.5,,,1,,297,Y
+KOKANEE,KALAMALKA,COLDSTREAM,A-F,44860,2022,10,26,,,,,Fence out with >100 fish interpolate to 0 on Oct. 26,0,,,1,,298,Y
+KOKANEE,WOOD,MIDDLE_VERNON,B-D,40804,2011,9,18,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,,1,,1,260,Y
+KOKANEE,WOOD,MIDDLE_VERNON,B-D,40849,2011,11,2,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,,1,,1,305,Y
+KOKANEE,WOOD,MIDDLE_VERNON,B-D,41535,2013,9,18,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,,1,,1,260,Y
+KOKANEE,WOOD,MIDDLE_VERNON,B-D,41580,2013,11,2,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,,1,,1,305,Y
+KOKANEE,WOOD,MIDDLE_VERNON,B-D,41900,2014,9,18,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,,1,,1,260,Y
+KOKANEE,WOOD,MIDDLE_VERNON,B-D,41945,2014,11,2,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,,1,,1,305,Y
+KOKANEE,WOOD,MIDDLE_VERNON,B-D,42265,2015,9,18,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,,1,,1,260,Y
+KOKANEE,WOOD,MIDDLE_VERNON,B-D,42310,2015,11,2,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,,1,,1,305,Y
+KOKANEE,WOOD,MIDDLE_VERNON,B-D,42630,2016,9,17,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,,1,,1,260,Y
+KOKANEE,WOOD,MIDDLE_VERNON,B-D,42675,2016,11,1,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,,1,,1,305,Y
+KOKANEE,WOOD,MIDDLE_VERNON,B-D,42995,2017,9,17,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,,1,,1,259,Y
+KOKANEE,WOOD,MIDDLE_VERNON,B-D,43040,2017,11,1,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,,1,,1,304,Y
+KOKANEE,KALAMALKA,COLDSTREAM,ALL,43723,2019,9,15,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,,1,,1,257,Y
+KOKANEE,KALAMALKA,COLDSTREAM,ALL,43768,2019,10,30,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,,1,,1,302,Y
+KOKANEE,KALAMALKA,COLDSTREAM,ALL,44089,2020,9,15,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,,1,,1,258,Y
+KOKANEE,KALAMALKA,COLDSTREAM,ALL,44134,2020,10,30,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,,1,,1,303,Y
+KOKANEE,KALAMALKA,COLDSTREAM,ALL,44454,2021,9,15,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,,1,,1,257,Y
+KOKANEE,KALAMALKA,COLDSTREAM,ALL,44499,2021,10,30,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,,1,,1,302,Y
+KOKANEE,KALAMALKA,COLDSTREAM,ALL,44819,2022,9,15,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,,1,,1,257,Y
+KOKANEE,KALAMALKA,COLDSTREAM,ALL,44864,2022,10,30,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,,1,,1,302,Y
+KOKANEE,KOOTENAY,REDFISH,ALL,44052,2020,8,9,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,,1,,1,222,Y
+KOKANEE,KOOTENAY,REDFISH,ALL,44099,2020,9,25,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,,1,,1,269,Y
+KOKANEE,OKANAGAN,PENTICTON,ALL,42287,2015,10,10,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,,1,,1,283,Y
+KOKANEE,OKANAGAN,PENTICTON,ALL,43383,2018,10,10,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,,1,,1,283,Y
+KOKANEE,OKANAGAN,PENTICTON,ALL,43748,2019,10,10,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,,1,,1,283,Y
+PINK,PACIFIC OCEAN,IRISH,76,33144,1990,9,28,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,0,1,,1,271,Y
+PINK,PACIFIC OCEAN,TOTEMOFF,621,33144,1990,9,28,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,0,1,,1,271,"N dead > fence, so fence must have been breached, see Bue et al 1998 p 244"
+PINK,PACIFIC OCEAN,HERRING,692,33144,1990,9,28,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,0,1,,1,271,Y
+PINK,PACIFIC OCEAN,CATHEAD,699,33144,1990,9,28,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,0,1,,1,271,Y
+PINK,PACIFIC OCEAN,IRISH,76,33509,1991,9,28,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,0,1,,1,271,Y
+PINK,PACIFIC OCEAN,LOOMIS,506,33509,1991,9,28,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,0,1,,1,271,Y
+PINK,PACIFIC OCEAN,TOTEMOFF,621,33509,1991,9,28,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,0,1,,1,271,"N dead > fence, so fence must have been breached, see Bue et al 1998 p 244"
+PINK,PACIFIC OCEAN,CHENEGA,628,33509,1991,9,28,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,0,1,,1,271,Y
+PINK,PACIFIC OCEAN,COUNTESS,637,33509,1991,9,28,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,0,1,,1,271,Y
 PINK,PACIFIC OCEAN,OBRIEN,666,33510,1991,9,29,0,,,,ADDED_0 on day 271 (272 Obrien as had one obs 271) to close off AUC ests for Pink data.,,0,1,,1,272,"N dead > fence, so fence must have been breached, see Bue et al 1998 p 244"
-PINK,PACIFIC OCEAN,HAYDEN,677,33509,1991,9,28,0,,,,ADDED_0 to close off AUC ests,,0,1,,1,271,Y
-PINK,PACIFIC OCEAN,HERRING,692,33509,1991,9,28,0,,,,ADDED_0 to close off AUC ests,,0,1,,1,271,Y
-PINK,PACIFIC OCEAN,CATHEAD,699,33509,1991,9,28,0,,,,ADDED_0 to close off AUC ests,,0,1,,1,271,Y
-PINK,PACIFIC OCEAN,HAWKINS,847,33509,1991,9,28,0,,,,ADDED_0 to match AIR and close off AUC ests,,0,1,,1,271,Y
-PINK,PACIFIC OCEAN,IRISH,76,33055,1990,7,1,0,,,,ADDED_0 at start to simlulate Kokanee assumptions,,0,1,,1,182,Y
-PINK,PACIFIC OCEAN,TOTEMOFF,621,33055,1990,7,1,0,,,,ADDED_0 at start to simlulate Kokanee assumptions,,0,1,,1,182,"N dead > fence, so fence must have been breached, see Bue et al 1998 p 244"
-PINK,PACIFIC OCEAN,HERRING,692,33055,1990,7,1,0,,,,ADDED_0 at start to simlulate Kokanee assumptions,,0,1,,1,182,Y
-PINK,PACIFIC OCEAN,CATHEAD,699,33055,1990,7,1,0,,,,ADDED_0 at start to simlulate Kokanee assumptions,,0,1,,1,182,Y
-PINK,PACIFIC OCEAN,IRISH,76,33420,1991,7,1,0,,,,ADDED_0 at start to simlulate Kokanee assumptions,,0,1,,1,182,Y
-PINK,PACIFIC OCEAN,LOOMIS,506,33420,1991,7,1,0,,,,ADDED_0 at start to simlulate Kokanee assumptions,,0,1,,1,182,Y
-PINK,PACIFIC OCEAN,TOTEMOFF,621,33420,1991,7,1,0,,,,ADDED_0 at start to simlulate Kokanee assumptions,,0,1,,1,182,"N dead > fence, so fence must have been breached, see Bue et al 1998 p 244"
-PINK,PACIFIC OCEAN,CHENEGA,628,33420,1991,7,1,0,,,,ADDED_0 at start to simlulate Kokanee assumptions,,0,1,,1,182,Y
-PINK,PACIFIC OCEAN,COUNTESS,637,33420,1991,7,1,0,,,,ADDED_0 at start to simlulate Kokanee assumptions,,0,1,,1,182,Y
-PINK,PACIFIC OCEAN,OBRIEN,666,33420,1991,7,1,0,,,,ADDED_0 at start to simlulate Kokanee assumptions,,0,1,,1,182,"N dead > fence, so fence must have been breached, see Bue et al 1998 p 244"
-PINK,PACIFIC OCEAN,HAYDEN,677,33420,1991,7,1,0,,,,ADDED_0 at start to simlulate Kokanee assumptions,,0,1,,1,182,Y
-PINK,PACIFIC OCEAN,HERRING,692,33420,1991,7,1,0,,,,ADDED_0 at start to simlulate Kokanee assumptions,,0,1,,1,182,Y
-PINK,PACIFIC OCEAN,CATHEAD,699,33420,1991,7,1,0,,,,ADDED_0 at start to simlulate Kokanee assumptions,,0,1,,1,182,Y
-PINK,PACIFIC OCEAN,HAWKINS,847,33420,1991,7,1,0,,,,ADDED_0 at start to simlulate Kokanee assumptions,,0,1,,1,182,Y
+PINK,PACIFIC OCEAN,HAYDEN,677,33509,1991,9,28,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,0,1,,1,271,Y
+PINK,PACIFIC OCEAN,HERRING,692,33509,1991,9,28,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,0,1,,1,271,Y
+PINK,PACIFIC OCEAN,CATHEAD,699,33509,1991,9,28,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,0,1,,1,271,Y
+PINK,PACIFIC OCEAN,HAWKINS,847,33509,1991,9,28,0,,,,ADDED_0 to match AIR observation and closes off ground AUC ests,,0,1,,1,271,Y
+PINK,PACIFIC OCEAN,IRISH,76,33055,1990,7,1,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,0,1,,1,182,Y
+PINK,PACIFIC OCEAN,TOTEMOFF,621,33055,1990,7,1,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,0,1,,1,182,"N dead > fence, so fence must have been breached, see Bue et al 1998 p 244"
+PINK,PACIFIC OCEAN,HERRING,692,33055,1990,7,1,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,0,1,,1,182,Y
+PINK,PACIFIC OCEAN,CATHEAD,699,33055,1990,7,1,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,0,1,,1,182,Y
+PINK,PACIFIC OCEAN,IRISH,76,33420,1991,7,1,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,0,1,,1,182,Y
+PINK,PACIFIC OCEAN,LOOMIS,506,33420,1991,7,1,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,0,1,,1,182,Y
+PINK,PACIFIC OCEAN,TOTEMOFF,621,33420,1991,7,1,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,0,1,,1,182,"N dead > fence, so fence must have been breached, see Bue et al 1998 p 244"
+PINK,PACIFIC OCEAN,CHENEGA,628,33420,1991,7,1,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,0,1,,1,182,Y
+PINK,PACIFIC OCEAN,COUNTESS,637,33420,1991,7,1,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,0,1,,1,182,Y
+PINK,PACIFIC OCEAN,OBRIEN,666,33420,1991,7,1,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,0,1,,1,182,"N dead > fence, so fence must have been breached, see Bue et al 1998 p 244"
+PINK,PACIFIC OCEAN,HAYDEN,677,33420,1991,7,1,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,0,1,,1,182,Y
+PINK,PACIFIC OCEAN,HERRING,692,33420,1991,7,1,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,0,1,,1,182,Y
+PINK,PACIFIC OCEAN,CATHEAD,699,33420,1991,7,1,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,0,1,,1,182,Y
+PINK,PACIFIC OCEAN,HAWKINS,847,33420,1991,7,1,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,0,1,,1,182,Y

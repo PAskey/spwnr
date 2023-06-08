@@ -21,13 +21,17 @@ All_cnts = read.csv("./SPAWNER_COUNTS.csv")%>%
   dplyr::mutate(STREAM_YR = paste0(STREAM,"_",YEAR),
                 GROUND_INTERP = tidyr::replace_na(GROUND_INTERP,0),
                 FENCE_INTERP = tidyr::replace_na(FENCE_INTERP,0),
-                ADDED_0 = tidyr::replace_na(ADDED_0,0))
+                ADDED_0 = tidyr::replace_na(ADDED_0,0))%>%
+  dplyr::select(-INCLUDED)
 
 #Create a simulation of KOkanee type counting frequency for Pink ground data
-ko = c(182,seq(220,252, by = 4))#Every 4th day starting on day 220. Assume 0 on day 182 similar to KO assumptions.
+#Every 4th day starting on day 222 to a total of 9 counts (Except Cathead 1990 which is missing data on day 254).
 
+ko = seq(222,by = 4, length.out = 9)
+
+#Also keep the added 0 values to end AUC range similar to KO assumptions (e.g. Assume 0 on day 182 ).
 All_cnts = All_cnts%>%
-  dplyr::mutate(KO_sim = dplyr::if_else(SPECIES == 'PINK'&DOY%in%ko|SPECIES == 'KOKANEE',1,0))
+  dplyr::mutate(KO_sim = dplyr::if_else(SPECIES == 'PINK'&DOY%in%ko|SPECIES == 'KOKANEE'|ADDED_0==1,1,0))
 
 
 spwnr = All_cnts%>%
@@ -75,33 +79,12 @@ spwnr_ests = dplyr::left_join(spwnr_ests, creek_groups, by = 'STREAM')%>%
 
 rm(air, ground, spwnr)
 
-#Mission_ch = read.csv("./Mission_channel.csv")
-#KO_cnts = read.csv("./KO_cnts.csv")
-#KO_fence = read.csv("./KO_fence.csv")
-#Pink_data = read.csv("./Pink_data.csv")
-#spwnr = read.csv("./spwnr.csv")
-
-#Summarize raw Kokanee counts into different visual indices.
-#KO_data = KO_cnts%>%
-#  dplyr::group_by(SPECIES = "KOKANEE", STREAM, YEAR)%>%
-#  dplyr::summarize(PEAK_COUNT = max(LIVE_COUNT), TAUC = spwnr::TAUC(DOY,LIVE_COUNT), GAUC = spwnr::GAUC(DOY,LIVE_COUNT))%>%
-#  ungroup()
-
-#KO_data = dplyr::full_join(KO_data, KO_fence, by = c('STREAM',"YEAR"))
-
-#Pink data escapement needs to be converted to fish days to be comparable to KO
-#Pink_data = Pink_data%>%
-#  dplyr::mutate(SPECIES = "PINK", TAUC = TAUC_E*l*v, GAUC = GAUC_E*l*v)%>%
-#  dplyr::select(-c(l,v,TAUC_E, HARR_E, GAUC_E))
-
-#spwnr = dplyr::full_join(KO_data,Pink_data)
-
-
 
 #SAve .rda files to data folder
 save(All_cnts, file = "../data/All_cnts.rda")
-#save(Mission_ch, file = "../data/Mission_ch.rda")
 save(spwnr_ests, file = "../data/spwnr_ests.rda")
-#save(KO_cnts, file = "../data/KO_cnts.rda")
+write.csv(All_cnts, file = "./All_cnts.csv", row.names = F)
+write.csv(spwnr_ests, file = "./spwnr_ests.csv", row.names = F)
+
 }
 

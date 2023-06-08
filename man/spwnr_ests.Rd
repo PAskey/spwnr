@@ -7,11 +7,13 @@
 \format{
 A data frame with 25 rows and 8 variables:
 \describe{
+  \item{STREAM_YR}{Grouping variable for stream and year}
   \item{SPECIES}{Character string describing species of fish being counted, Kokanee or Pink Salmon}
   \item{STREAM}{Character string describing stream name}
   \item{YEAR}{Year of survey}
-  \item{FENCE_COUNT}{Total number of fish passing fence in the survey year}
-  \item{PEAK_COUNT}{Maximum number of fish observed during a single survey on a single day within a year}
+  \item{Method}{The viewing method GROUND or AIR used to count fish}
+  \item{FENCE}{Total number of fish passing fence in the survey year}
+  \item{PEAK_COUNT}{Maximum number of fish observed during a single survey for the corresponding species, year and method}
   \item{TAUC}{Total fish days from Trapezoidal area under the curve}
   \item{GAUC}{Total fish days from Gaussian area under the curve}
   \item{fit_group}{Groups of streams for cross-validation analyses}
@@ -19,15 +21,12 @@ A data frame with 25 rows and 8 variables:
 }
 }
 \source{
-PAskey personal copy compiled from .csv files KO_cnts, KO_fence, Pink_data in data-raw. See data_prep.R in data-raw. Pink data from Millar et la 2012 publication.
+Data supplied from R. Millar for Pink salmon and BC government staff in Penticton for Kokanee. PAskey personal copy compiled from .csv files in data-raw. See data_prep.R in data-raw.
 }
 \usage{
 spwnr_ests
 }
 \description{
 A summary of the total number of spawners passing through a counting fence as compared to visual indices of fish days (GAUC and TAUC) and Peak Counts.
-}
-\references{
-\url{https://www.researchgate.net/profile/Chris-Jordan-7/publication/237176128_Simple_estimators_of_salmonid_escapement_and_its_variance_using_a_new_area-under-the-curve_method/links/58d02719a6fdcc344b0c08b6/Simple-estimators-of-salmonid-escapement-and-its-variance-using-a-new-area-under-the-curve-method.pdf}
 }
 \keyword{datasets}

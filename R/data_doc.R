@@ -1,68 +1,53 @@
-#' Visual counts of Kokanee spawners in Okanagan, BC streams from ground based surveys
+#' Visual counts of Kokanee spawners in Okanagan, BC and Pink Salmon spanwers in Alaska.
 #'
 #'
 #' @format A data frame with 145 rows and 9 variables:
 #' \describe{
+#'   \item{SPECIES}{Character string describing common name of species counted}
+#'   \item{LAKE}{Character string describing the rearing water body where spawners originate}
 #'   \item{STREAM}{Character string describing stream name}
+#'   \item{REACH}{Character string describing stream reaches counted}
+#'   \item{DATE}{Numerical date}
 #'   \item{YEAR}{Year of survey}
 #'   \item{MONTH}{Month of survey}
 #'   \item{DAY}{Day within month of survey}
+#'   \item{GROUND_LIVE}{Number of live spawners counted in stream from an observer on the ground}
+#'   \item{GROUND_DEAD}{Number of dead spawners counted in stream from an observer on the ground}
+#'   \item{GROUND_NEW_DEAD}{Number of newly dead spawners counted in stream from an observer on the ground. KNown to be new if the observer cuts tail off of carcasses after observing.}
+#'   \item{TEMP_C}{Stream temperature measured at time of survey or daily average by a logger}
+#'   \item{COMMENTS}{COmments realted to data}
+#'   \item{FENCE_PASS}{The number of spawners moving past a counting fence}
+#'   \item{AIR_LIVE}{Number of live spawners counted in stream from an observer in the air - helicopter}
+#'   \item{GROUND_INTERP}{0 or 1 indicating if the GROUND_LIVE data was interpolated for that day}
+#'   \item{FENCE_INTERP}{0 or 1 indicating if the FENCE_PASS live data was interpolated for that day}
+#'   \item{ADDED_0}{0 or 1 indicating if a 0 observation was added (assumed) on that day to define the spawning period for AUC}
 #'   \item{DOY}{Day within year (from Jan 1) of survey}
-#'   \item{Date}{Character string of date}
-#'   \item{NUM_DATE}{Numeric of date}
-#'   \item{LIVE_COUNT}{Number of live Kokanee counted in stream}
-#'   \item{SOURCE}{Character string describing if 'OBSERVED' data or an "ADDED_0" to define endpoints of run for AUC calculations}
+#'   \item{STREAM_YR}{Grouping variable for stream and year}
+#'   \item{KO_sim}{0 or 1 to Subsample of counts to simulate ground counts following Kokanee methods}
+#'
 #' }
-#' @source PAskey personal copy with .csv stored in data-raw. Obtained from BC provincial government fisheries staff in Penticton.
-"KO_cnts"
+#' @source Data supplied from R. Millar for Pink salmon and BC government staff in Penticton for Kokanee. PAskey personal copies with .csv files stored in data-raw. data_prep() function in data-raw used to generate .rda file.
+"All_cnts"
 
-#' Fence counts of all Kokanee entering stream over entire run for several BC interior streams
-#'
-#'
-#' @format A data frame with 14 rows and 3 variables:
-#' \describe{
-#'   \item{STREAM}{Character string describing stream name}
-#'   \item{YEAR}{Year of survey}
-#'   \item{FENCE_COUNT}{Total number of fish passing fence in the survey year}
-#' }
-#' @source PAskey personal copy with .csv stored in data-raw
-"KO_fence"
-
-#' Daily visual counts of Kokanee spawners in Mission Creek spawning channel, BC from ground based surveys
-#'
-#'
-#' @format A data frame with 616 observations and 10 variables
-#' \describe{
-#'   \item{STREAM}{Character string describing stream name, only MISSION}
-#'   \item{REACH}{Character string describing stream reach. Reach E selected as this is the spawning channel}
-#'   \item{YEAR}{Year of survey}
-#'   \item{MONTH}{Month of survey}
-#'   \item{DAY}{Day within month of survey}
-#'   \item{Date}{Character string of date}
-#'   \item{NO_LIVE}{Number of live Kokanee counted in stream}
-#'    \item{NO_DEAD}{Number of dead Kokanee counted in stream}
-#'   \item{TEMP_C}{Numeric of stream temperature in celsius}
-#'   \item{COMMENTS}{Character string of additional information collected by counting contractor}
-#' }
-#' @source PAskey personal copy. Raw csv file Mission_channel in data-raw folder. Obtained from BC fisheries staff in Penticton.
-"Mission_ch"
 
 #' A summary of the total number of spawners passing through a counting fence as compared to visual indices of fish days (GAUC and TAUC) and Peak Counts.
 #'
 #' @name spwnr_ests
 #' @format A data frame with 25 rows and 8 variables:
 #' \describe{
+#'   \item{STREAM_YR}{Grouping variable for stream and year}
 #'   \item{SPECIES}{Character string describing species of fish being counted, Kokanee or Pink Salmon}
 #'   \item{STREAM}{Character string describing stream name}
 #'   \item{YEAR}{Year of survey}
-#'   \item{FENCE_COUNT}{Total number of fish passing fence in the survey year}
-#'   \item{PEAK_COUNT}{Maximum number of fish observed during a single survey on a single day within a year}
+#'   \item{Method}{The viewing method GROUND or AIR used to count fish}
+#'   \item{FENCE}{Total number of fish passing fence in the survey year}
+#'   \item{PEAK_COUNT}{Maximum number of fish observed during a single survey for the corresponding species, year and method}
 #'   \item{TAUC}{Total fish days from Trapezoidal area under the curve}
 #'   \item{GAUC}{Total fish days from Gaussian area under the curve}
 #'   \item{fit_group}{Groups of streams for cross-validation analyses}
 #'
 #' }
-#' @source PAskey personal copy compiled from .csv files KO_cnts, KO_fence, Pink_data in data-raw. See data_prep.R in data-raw. Pink data from Millar et la 2012 publication.
-#' @references \url{https://www.researchgate.net/profile/Chris-Jordan-7/publication/237176128_Simple_estimators_of_salmonid_escapement_and_its_variance_using_a_new_area-under-the-curve_method/links/58d02719a6fdcc344b0c08b6/Simple-estimators-of-salmonid-escapement-and-its-variance-using-a-new-area-under-the-curve-method.pdf}
+#' @source Data supplied from R. Millar for Pink salmon and BC government staff in Penticton for Kokanee. PAskey personal copy compiled from .csv files in data-raw. See data_prep.R in data-raw.
+
 "spwnr_ests"
 
