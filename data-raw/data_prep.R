@@ -1,6 +1,6 @@
 #' This R code takes available raw data for Kokanee and Pink salmon and formats for analyses.
-#' Pink fence and AUC data is take from Millar et al. 2012 CJFAS
-#' Pink peak counts are taken from Hilborn et al. 1999 Table 1, or digitizing from figures in Millar et al. 2012.
+#' Pink fence and ground data was provided from R. Millar, see  Millar et al. 2012 CJFAS
+#' Kokanee data from P Askey, and BC government staff in Penticton.
 
 #' @title data_prep
 #' @name data_prep
@@ -14,6 +14,7 @@
 
 data_prep <- function(){
 
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 #Read in raw data from csv files in data-raw
 All_cnts = read.csv("./SPAWNER_COUNTS.csv")%>%
   dplyr::filter(INCLUDED == 'Y')%>%#Stream data that were QC'd and included in previous publications
@@ -23,6 +24,15 @@ All_cnts = read.csv("./SPAWNER_COUNTS.csv")%>%
                 FENCE_INTERP = tidyr::replace_na(FENCE_INTERP,0),
                 ADDED_0 = tidyr::replace_na(ADDED_0,0))%>%
   dplyr::select(-INCLUDED)
+
+#Createa data set of 0 assumptions
+GR_Added_0s = All_cnts%>%
+  filter(!is.na(GROUND_LIVE), ADDED_0 == 0)%>%
+  group_by(SPECIES, STREAM_YR)%>%
+  summarize(tmin = min(DOY),
+            tmin_C = GROUND_LIVE[order(min(DOY))],
+            tmax = max(DOY),
+            tmax_C = GROUND_LIVE[order(max(DOY))])
 
 #Create a simulation of KOkanee type counting frequency for Pink ground data
 #Every 4th day starting on day 222 to a total of 9 counts (Except Cathead 1990 which is missing data on day 254).

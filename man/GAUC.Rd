@@ -4,12 +4,14 @@
 \alias{GAUC}
 \title{GAUC}
 \usage{
-GAUC(t, obs, out = "AUC", preds.t = NULL)
+GAUC(t, obs, t_ends = NULL, out = "AUC", preds.t = NULL)
 }
 \arguments{
 \item{t}{an ordered time series of count days}
 
-\item{obs}{a series of observed counts of live fish corresponding to each t}
+\item{obs}{a series of observed counts of live fish corresponding to each t
+#' @param t_ends a vector of two values to define the first and last day of spawning season to be assigned 0 values.
+These values are not required for GAUC, but can lead to more realistic results when the count data series does not start and end with 0s.}
 
 \item{out}{preferred type of output, default "AUC" = total fish days, "preds" returns the time specific predictions (e.g. for plotting)}
 
@@ -22,16 +24,17 @@ A function to estimate the GAUC from a time series of spawner counts
 This function is used to calculate the number of total fish days based on a series of spawner counts. Assumes the relative number of fish over time follows a Gaussian curve.
 }
 \examples{
- #Kokanee data from Coldstream Creek in 2021
+#Kokanee data from Coldstream Creek in 2021
 t = c(270,273,276,282,287,290,295)
 obs = c(603,1010,1380,4183,4158,3721,4423)
- #Add 0 observations at start and end, so that same information as used for TAUC example
- #Although 0 observations are not necessary for GAUC
-t0 = c(263,303)
-o0 = c(0,0)
-t = c(t0,t)
-obs = c(o0,obs)
 GAUC(t,obs)
+
+ #Although bracketing with 0 observations is not necessary for GAUC (as it is in TAUC),
+ #and often makes no difference, adding a defined spawning period (t_ends) can constrain to more realistic results
+ #if the observations are on the edge of a spawning period and start or end with a high value.
+ #Add 0 observations at start and end, so that same information as used for TAUC example
+
+GAUC(t,obs, t_ends = c(263,303))
 }
 \keyword{AUC}
 \keyword{GAUC}
