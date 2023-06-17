@@ -35,6 +35,16 @@ GAUC(t,obs)
  #Add 0 observations at start and end, so that same information as used for TAUC example
 
 GAUC(t,obs, t_ends = c(263,303))
+#In this Kokanee stream-year the constraints make no difference.
+#However, if we take the Herring 1990 stream year from the Pink Salmon data set we see the effect.
+
+ t = All_cnts\%>\%dplyr::filter(STREAM =='HERRING', YEAR == 1990, !is.na(AIR_LIVE))\%>\%dplyr::pull(DOY)
+ t
+ obs = All_cnts\%>\%dplyr::filter(STREAM =='HERRING', YEAR == 1990, !is.na(AIR_LIVE))\%>\%dplyr::pull(AIR_LIVE)
+ obs
+ GAUC(t,obs)
+ #Compare this value to an estimate of total fish days with the spawn period defined the known value
+ GAUC(t,obs,t_ends = c(198,271))
 }
 \keyword{AUC}
 \keyword{GAUC}
