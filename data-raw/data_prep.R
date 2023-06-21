@@ -16,7 +16,12 @@ data_prep <- function(){
 
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 #Read in raw data from csv files in data-raw
-All_cnts = read.csv("./SPAWNER_COUNTS.csv")%>%
+All_cnts = read.csv("./SPAWNER_COUNTS.csv")
+Added_0s = read.csv("./Added_0s.csv")
+#Add in the assumed 0 counts to define the spawner run and close off AUC estiamates.
+All_cnts = rbind(All_cnts,Added_0s)
+
+All_cnts = All_cnts%>%
   dplyr::filter(INCLUDED == 'Y')%>%#Stream data that were QC'd and included in previous publications
   dplyr::arrange(SPECIES, YEAR, STREAM, DOY)%>%
   dplyr::mutate(STREAM_YR = paste0(STREAM,"_",YEAR),
@@ -37,7 +42,7 @@ GR_Added_0s = All_cnts%>%
 #Create a simulation of KOkanee type counting frequency for Pink ground data
 #Every 4th day starting on day 222 to a total of 9 counts (Except Cathead 1990 which is missing data on day 254).
 
-ko = seq(222,by = 4, length.out = 9)
+ko = seq(223,by = 4, length.out = 9)
 
 #Also keep the added 0 values to end AUC range similar to KO assumptions (e.g. Assume 0 on day 182 ).
 All_cnts = All_cnts%>%

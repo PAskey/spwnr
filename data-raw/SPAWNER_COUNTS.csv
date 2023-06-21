@@ -1678,7 +1678,7 @@ KOKANEE,OKANAGAN,PENTICTON,ALL,42278,2015,10,1,,,,,,3,,,1,,274,Y
 KOKANEE,OKANAGAN,PENTICTON,ALL,42279,2015,10,2,,,,,,2,,,1,,275,Y
 KOKANEE,OKANAGAN,PENTICTON,ALL,42280,2015,10,3,,,,,,1,,,1,,276,Y
 KOKANEE,OKANAGAN,PENTICTON,ALL,42281,2015,10,4,,,,,,0,,,1,,277,Y
-KOKANEE,OKANAGAN,PENTICTON,ALL,43342,2018,8,30,0,,,,No fish observed upstream at install. ADDED_0 but this was an actual observation outside of routine counts.,0,,,,1,242,Y
+KOKANEE,OKANAGAN,PENTICTON,ALL,43342,2018,8,30,0,,,,ADDED_0 to ground_live but this was an actual observation outside of routine counts. No fish observed upstream at install. ,0,,,,1,242,Y
 KOKANEE,OKANAGAN,PENTICTON,ALL,43343,2018,8,31,,,,,Fish passed at night and mornings. Number reflects total passed by date (only a portion might be visible at time of bank counts)upstream and visible during the day period that day.,16,,,,,243,Y
 KOKANEE,OKANAGAN,PENTICTON,ALL,43344,2018,9,1,,,,,Fish passed at night and mornings. Number reflects total passed by date (only a portion might be visible at time of bank counts)upstream and visible during the day period that day.,35,,,,,244,Y
 KOKANEE,OKANAGAN,PENTICTON,ALL,43345,2018,9,2,,,,,Fish passed at night and mornings. Number reflects total passed by date (only a portion might be visible at time of bank counts)upstream and visible during the day period that day.,9,,,,,245,Y
@@ -1718,7 +1718,7 @@ KOKANEE,OKANAGAN,PENTICTON,ALL,43378,2018,10,5,,,,,Fish passed at night and morn
 KOKANEE,OKANAGAN,PENTICTON,ALL,43379,2018,10,6,,,,,Fish passed at night and mornings. Number reflects total passed by date (only a portion might be visible at time of bank counts)upstream and visible during the day period that day.,1,,,1,,279,Y
 KOKANEE,OKANAGAN,PENTICTON,ALL,43705,2019,8,28,,,,,Fence install day (Bill Wicket had seen two early Kokanee below fish ladder before install),2,,,1,,240,Y
 KOKANEE,OKANAGAN,PENTICTON,ALL,43706,2019,8,29,,,,,Fish passed at night and mornings. Number reflects total passed by date (only a portion might be visible at time of bank counts)upstream and visible during the day period that day.,0,,,,,241,Y
-KOKANEE,OKANAGAN,PENTICTON,ALL,43707,2019,8,30,0,,,,Fish passed at night and mornings. Number reflects total passed by date (only a portion might be visible at time of bank counts)upstream and visible during the day period that day.,0,,,,1,242,Y
+KOKANEE,OKANAGAN,PENTICTON,ALL,43707,2019,8,30,0,,,,ADDED_0 to ground_live but this was known from fence counts. Fish passed at night and mornings. Number reflects total passed by date (only a portion might be visible at time of bank counts)upstream and visible during the day period that day.,0,,,,1,242,Y
 KOKANEE,OKANAGAN,PENTICTON,ALL,43708,2019,8,31,,,,,Fish passed at night and mornings. Number reflects total passed by date (only a portion might be visible at time of bank counts)upstream and visible during the day period that day.,0,,,,,243,Y
 KOKANEE,OKANAGAN,PENTICTON,ALL,43709,2019,9,1,,,,,Fish passed at night and mornings. Number reflects total passed by date (only a portion might be visible at time of bank counts)upstream and visible during the day period that day.,0,,,,,244,Y
 KOKANEE,OKANAGAN,PENTICTON,ALL,43710,2019,9,2,,,,,Fish passed at night and mornings. Number reflects total passed by date (only a portion might be visible at time of bank counts)upstream and visible during the day period that day.,0,,,,,245,Y
@@ -2161,56 +2161,3 @@ KOKANEE,KALAMALKA,COLDSTREAM,A-F,44857,2022,10,23,2367,532,,6,,199,,,,,295,Y
 KOKANEE,KALAMALKA,COLDSTREAM,A-F,44858,2022,10,24,,,,,,109,,,,,296,Y
 KOKANEE,KALAMALKA,COLDSTREAM,A-F,44859,2022,10,25,,,,,Fence out with >100 fish interpolate to 0 on Oct. 26,54.5,,,1,,297,Y
 KOKANEE,KALAMALKA,COLDSTREAM,A-F,44860,2022,10,26,,,,,Fence out with >100 fish interpolate to 0 on Oct. 26,0,,,1,,298,Y
-KOKANEE,WOOD,MIDDLE_VERNON,B-D,40804,2011,9,18,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,,1,,1,260,Y
-KOKANEE,WOOD,MIDDLE_VERNON,B-D,40849,2011,11,2,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,,1,,1,305,Y
-KOKANEE,WOOD,MIDDLE_VERNON,B-D,41535,2013,9,18,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,,1,,1,260,Y
-KOKANEE,WOOD,MIDDLE_VERNON,B-D,41580,2013,11,2,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,,1,,1,305,Y
-KOKANEE,WOOD,MIDDLE_VERNON,B-D,41900,2014,9,18,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,,1,,1,260,Y
-KOKANEE,WOOD,MIDDLE_VERNON,B-D,41945,2014,11,2,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,,1,,1,305,Y
-KOKANEE,WOOD,MIDDLE_VERNON,B-D,42265,2015,9,18,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,,1,,1,260,Y
-KOKANEE,WOOD,MIDDLE_VERNON,B-D,42310,2015,11,2,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,,1,,1,305,Y
-KOKANEE,WOOD,MIDDLE_VERNON,B-D,42630,2016,9,17,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,,1,,1,260,Y
-KOKANEE,WOOD,MIDDLE_VERNON,B-D,42675,2016,11,1,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,,1,,1,305,Y
-KOKANEE,WOOD,MIDDLE_VERNON,B-D,42996,2017,9,18,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,,1,,1,260,Y
-KOKANEE,WOOD,MIDDLE_VERNON,B-D,43041,2017,11,2,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,,1,,1,305,Y
-KOKANEE,KALAMALKA,COLDSTREAM,ALL,43723,2019,9,15,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,,1,,1,257,Y
-KOKANEE,KALAMALKA,COLDSTREAM,ALL,43768,2019,10,30,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,,1,,1,302,Y
-KOKANEE,KALAMALKA,COLDSTREAM,ALL,44088,2020,9,14,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,,1,,1,257,Y
-KOKANEE,KALAMALKA,COLDSTREAM,ALL,44133,2020,10,29,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,,1,,1,302,Y
-KOKANEE,KALAMALKA,COLDSTREAM,ALL,44454,2021,9,15,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,,1,,1,257,Y
-KOKANEE,KALAMALKA,COLDSTREAM,ALL,44499,2021,10,30,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,,1,,1,302,Y
-KOKANEE,KALAMALKA,COLDSTREAM,ALL,44819,2022,9,15,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,,1,,1,257,Y
-KOKANEE,KALAMALKA,COLDSTREAM,ALL,44864,2022,10,30,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,,1,,1,302,Y
-KOKANEE,KOOTENAY,REDFISH,ALL,44052,2020,8,9,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,,1,,1,222,Y
-KOKANEE,KOOTENAY,REDFISH,ALL,44099,2020,9,25,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,,1,,1,269,Y
-KOKANEE,OKANAGAN,PENTICTON,ALL,42287,2015,10,10,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,,1,,1,283,Y
-KOKANEE,OKANAGAN,PENTICTON,ALL,43383,2018,10,10,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,,1,,1,283,Y
-KOKANEE,OKANAGAN,PENTICTON,ALL,43748,2019,10,10,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,,1,,1,283,Y
-PINK,PACIFIC OCEAN,IRISH,76,33144,1990,9,28,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,0,1,,1,271,Y
-PINK,PACIFIC OCEAN,TOTEMOFF,621,33144,1990,9,28,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,0,1,,1,271,"N dead > fence, so fence must have been breached, see Bue et al 1998 p 244"
-PINK,PACIFIC OCEAN,HERRING,692,33144,1990,9,28,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,0,1,,1,271,Y
-PINK,PACIFIC OCEAN,CATHEAD,699,33144,1990,9,28,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,0,1,,1,271,Y
-PINK,PACIFIC OCEAN,IRISH,76,33509,1991,9,28,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,0,1,,1,271,Y
-PINK,PACIFIC OCEAN,LOOMIS,506,33509,1991,9,28,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,0,1,,1,271,Y
-PINK,PACIFIC OCEAN,TOTEMOFF,621,33509,1991,9,28,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,0,1,,1,271,"N dead > fence, so fence must have been breached, see Bue et al 1998 p 244"
-PINK,PACIFIC OCEAN,CHENEGA,628,33509,1991,9,28,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,0,1,,1,271,Y
-PINK,PACIFIC OCEAN,COUNTESS,637,33509,1991,9,28,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,0,1,,1,271,Y
-PINK,PACIFIC OCEAN,OBRIEN,666,33510,1991,9,29,0,,,,ADDED_0 on day 271 (272 Obrien as had one obs 271) to close off AUC ests for Pink data.,,0,1,,1,272,"N dead > fence, so fence must have been breached, see Bue et al 1998 p 244"
-PINK,PACIFIC OCEAN,HAYDEN,677,33509,1991,9,28,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,0,1,,1,271,Y
-PINK,PACIFIC OCEAN,HERRING,692,33509,1991,9,28,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,0,1,,1,271,Y
-PINK,PACIFIC OCEAN,CATHEAD,699,33509,1991,9,28,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests,,0,1,,1,271,Y
-PINK,PACIFIC OCEAN,HAWKINS,847,33509,1991,9,28,0,,,,ADDED_0 to match AIR observation and closes off ground AUC ests,,0,1,,1,271,Y
-PINK,PACIFIC OCEAN,IRISH,76,33071,1990,7,17,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests. ON average obs on this day are<.1% of fish days.,,,1,,1,198,Y
-PINK,PACIFIC OCEAN,TOTEMOFF,621,33071,1990,7,17,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests. ON average obs on this day are<.1% of fish days.,,,1,,1,198,"N dead > fence, so fence must have been breached, see Bue et al 1998 p 244"
-PINK,PACIFIC OCEAN,HERRING,692,33071,1990,7,17,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests. ON average obs on this day are<.1% of fish days.,,,1,,1,198,Y
-PINK,PACIFIC OCEAN,CATHEAD,699,33071,1990,7,17,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests. ON average obs on this day are<.1% of fish days.,,,1,,1,198,Y
-PINK,PACIFIC OCEAN,IRISH,76,33436,1991,7,17,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests. ON average obs on this day are<.1% of fish days.,,,1,,1,198,Y
-PINK,PACIFIC OCEAN,LOOMIS,506,33436,1991,7,17,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests. ON average obs on this day are<.1% of fish days.,,,1,,1,198,Y
-PINK,PACIFIC OCEAN,TOTEMOFF,621,33436,1991,7,17,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests. ON average obs on this day are<.1% of fish days.,,0,1,,1,198,"N dead > fence, so fence must have been breached, see Bue et al 1998 p 244"
-PINK,PACIFIC OCEAN,CHENEGA,628,33436,1991,7,17,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests. ON average obs on this day are<.1% of fish days.,,0,1,,1,198,Y
-PINK,PACIFIC OCEAN,COUNTESS,637,33436,1991,7,17,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests. ON average obs on this day are<.1% of fish days.,,,1,,1,198,Y
-PINK,PACIFIC OCEAN,OBRIEN,666,33436,1991,7,17,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests. ON average obs on this day are<.1% of fish days.,,,1,,1,198,"N dead > fence, so fence must have been breached, see Bue et al 1998 p 244"
-PINK,PACIFIC OCEAN,HAYDEN,677,33436,1991,7,17,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests. ON average obs on this day are<.1% of fish days.,,,1,,1,198,Y
-PINK,PACIFIC OCEAN,HERRING,692,33436,1991,7,17,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests. ON average obs on this day are<.1% of fish days.,,,1,,1,198,Y
-PINK,PACIFIC OCEAN,CATHEAD,699,33436,1991,7,17,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests. ON average obs on this day are<.1% of fish days.,,,1,,1,198,Y
-PINK,PACIFIC OCEAN,HAWKINS,847,33436,1991,7,17,0,,,,ADDED_0 observations to ensure total potential spawning period is defined for AUC ests. ON average obs on this day are<.1% of fish days.,,,1,,1,198,Y

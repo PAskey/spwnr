@@ -1,5 +1,5 @@
 # spwnr
-This package was created to make the raw data and functions available from 'Comparison of known spawner abundance from fence counts to visual counts for simplified spawner estimation methods.' Askey et al. (2023)in review) in the Canadian Journal of Fisheries and Aquatic Sciences.      Includes data comparing visual counts of Kokanee spawners to census data from spawner fences. 
+This package was created to make the raw data and functions available from 'Comparison of known spawner abundance from fence counts to visual counts for simplified spawner estimation methods.' Askey et al. (in review) in the Canadian Journal of Fisheries and Aquatic Sciences.      Includes data comparing visual counts of Kokanee spawners to census data from spawner fences. 
 
 # Installation
 Install with devtools package from PAskey github account
@@ -17,38 +17,86 @@ The primary objective of this package is to make data available to others, and d
 
 # Main functions and uses
 
-  * More detailed explanations of any of the functions below can be founds by typing ?function into the R console. E.g. ?GAUC. If you want to see the raw source code for any of the functions type View(function name) e.g. View(GAUC). If you would like to make changes of that code, ideally you go to my Github account to get the source code and create a branch with your potential edits.
+There are two functions in the package: GAUC() and TAUC(). Each produces an estimate of total fish days based on a series of counts.
 
-There are currently 4 data sets available that were used in the published data analyses: KO_cnts, KO_fence, Mission_ch, and spwnr. 
+More detailed explanations of the functions below can be founds by typing ?function into the R console after the package has been loaded. E.g. ?GAUC. If you want to see the raw source code for any of the functions type View(function name) (e.g. View(GAUC)) or review in the R folder for this package on Github. If you would like to make changes of that code, ideally you go to my Github account to get the source code and create a branch with your potential edits.
 
-These data sets are accessible in R by simply entering the dataset name. To bring the data into the RStudio environment, you can use data() at the prompt
+There are currently 2 data sets available as .rda files that were used in the published data analyses: All_cnts and spwnr_ests. Type ?All_cnts for details.
+
+These data sets are accessible in R by simply entering the dataset name ince the package is loaded. To bring the data into the RStudio environment, you can use data() at the prompt
 
 ```R
 #These data sets are accessible in R by name.
 #To verify which data sets are included in a package use data():
 data(package = "spwnr")
 
-#The data sets are accessible by name. For example to see column names for spwnr dataset:
-names(KO_cnts)
+#The data sets are accessible by name. For example to see column names for spwnr_ests dataset:
+names(spwnr_ests)
 
-#To bring the data into your R environment use data() function. There is one dataset that has the same name as the package. If you pute spwn without "" in the data function it loads the data set.
-data(spwnr)
+#To bring the data into your R environment you can use use data() function.
+data(spwnr_ests)
+
+#Or just call directly and assign to a name e.g. df
+df = spwnr_ests
 
 ```
-The data in the spwnr data set is the summarized data set with 3 different visual indices: PEAK_COUNT, TAUC and GAUC. All explained in ASkey et al. in review. The functions to calcualte TAUC and GAUC are included in this package by name and re-craetion of the summary data set can be accomplished as follows:
+The data in the spwnr_ests data set is the summarized data set with 3 different visual indices: PEAK_COUNT, TAUC and GAUC. All explained in Askey et al. in review. The functions to calculate TAUC and GAUC are included in this package. You can delve into data-raw folder on Github to see the raw files and code to crate the two data sets.
 
 ```R
-library(dplyr)
+#Code to create and save first two figures in publication
+#Copy and paste into your console after installing package
 
-KO_cnts = KO_cnts %>%# mutate_if(is.numeric,as.integer)%>%
-  #mutate_if(is.character, as.factor)%>%
-  filter(SOURCE == 'OBSERVED')%>%
-  arrange(STREAM,YEAR,DOY)
+library(tidyverse)
+library(spwnr)
+setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 
-vis = KO_cnts%>%
+#Kokanee
+All_cnts = spwnr::All_cnts%>%
+  dplyr::group_by(STREAM_YR, YEAR, STREAM)%>%
+  tidyr::complete(DOY = seq(min(DOY), max(DOY)))%>%#Need complete to smooth out predictions in plot
+  dplyr::mutate(preds = GAUC(t = DOY, obs = GROUND_LIVE, out = 'preds'))
+
+KO = All_cnts%>%dplyr::filter(SPECIES=='KOKANEE', STREAM != 'MISSION')
+sc = 1000
+#Figure 1 KO
+ggplot(KO, aes(x = DOY, y = GROUND_LIVE/sc, group = STREAM))+
+  geom_area(aes(x = DOY, y = FENCE_PASS/sc), fill = "light grey")+
+  geom_line(aes(y = preds/sc), colour = 'dark grey', lwd = 1.1)+
+  geom_line(data = KO[!is.na(KO$GROUND_LIVE),], lty = 2)+
+  geom_line(data = KO[!is.na(KO$GROUND_LIVE)&KO$GROUND_INTERP == 0,])+
+  geom_point(data = KO[KO$GROUND_INTERP == 0,], size = 2)+
+  facet_wrap(~STREAM_YR, scales = "free", ncol = 3, dir = 'v')+
+  labs(y = "Live count (thousands)", x = "Day of year")+
+  theme_bw(base_size = 10)+
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
+
+ggsave(filename = "Figure_1.png", width = 6.5, height = 8.5, dpi = 300, units = "in")
+
+#Pink data and estimate of live fish present as per Bue et al. 1998
+PK = All_cnts%>%
+  filter(SPECIES=='PINK')%>%
   group_by(STREAM_YR)%>%
-  dplyr::summarize(TAUC = TAUC(DOY, LIVE_COUNT), GAUC = GAUC(DOY, LIVE_COUNT), PC = max(LIVE_COUNT))
+  mutate(
+  EST_LIVE = cumsum(replace_na(FENCE_PASS,0))-cumsum(replace_na(GROUND_NEW_DEAD,0))
+  )
 
-vis = left_join(vis,KO_fence, by = "STREAM_YR")%>%select(-c(STREAM_YR, PEAK_VISUAL))
+PK$EST_LIVE[PK$EST_LIVE<0]=0
+
+ggplot(PK, aes(x = DOY, y = GROUND_LIVE/sc))+
+  geom_line(aes(y = EST_LIVE/sc), colour = 'grey')+
+  geom_point(pch = 1, colour = 'grey')+
+  geom_point(data = PK[PK$ADDED_0 == 0&!is.na(PK$AIR_LIVE),],aes(y = AIR_LIVE/sc), pch = 24, size = 2,fill = 'grey')+
+  geom_line(data = PK[PK$ADDED_0 == 0&!is.na(PK$AIR_LIVE),],aes(x = DOY, y = AIR_LIVE/sc))+
+  geom_line(data = PK[PK$ADDED_0 == 0&PK$KO_sim ==1,],aes(x = DOY, y = GROUND_LIVE/sc))+
+  geom_point(data = PK[PK$ADDED_0 == 0&PK$KO_sim ==1,],aes(x = DOY, y = GROUND_LIVE/sc), pch = 21, size = 2, fill = 'grey')+
+  geom_line(data = PK[!is.na(PK$AIR_LIVE),],aes(x = DOY, y = AIR_LIVE/sc), lty = 2)+
+  geom_line(data = PK[PK$ADDED_0 == 1|PK$KO_sim ==1,],aes(x = DOY, y = GROUND_LIVE/sc), lty = 2)+
+  xlim(190,275)+#truncates some obs for Irish Creek at start
+  facet_wrap(~STREAM_YR, scales = "free", ncol = 3, dir = 'v')+
+  labs(y = "Live count (thousands)", x = "Day of year")+
+  theme_bw(base_size = 10)+
+  theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank())
+
+ggsave(filename = "Figure_2.png", width = 6.5, height = 8.5*.8, dpi = 300, units = "in")
 
 ```

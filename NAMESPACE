@@ -2,8 +2,6 @@
 
 export("%>%")
 export(GAUC)
-export(Repro_tbls)
 export(TAUC)
 importFrom(magrittr,"%>%")
-importFrom(rlang,.data)
 importFrom(zoo,rollapply)

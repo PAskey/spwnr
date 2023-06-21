@@ -15,7 +15,7 @@ TAUC(t, obs, t_ends = NULL)
 These values are needed when the data series does not start and end with 0s.}
 }
 \description{
-A function to estimate the TAUC from a time series of spawner counts
+A function to estimate the TAUC from a time series of spawner counts. See Askey et al. in review CJFAS.
 }
 \details{
 This function is used to calculate the number of total fish days based on a series of spawner counts. Uses the trapezoidal method.

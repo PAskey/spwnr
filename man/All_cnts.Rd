@@ -3,7 +3,7 @@
 \docType{data}
 \name{All_cnts}
 \alias{All_cnts}
-\title{Visual counts of Kokanee spawners in Okanagan, BC and Pink Salmon spanwers in Alaska.}
+\title{Visual counts of Kokanee spawners in British COlumbia and Pink Salmon spawners in Alaska.}
 \format{
 A data frame with 145 rows and 9 variables:
 \describe{
@@ -19,7 +19,7 @@ A data frame with 145 rows and 9 variables:
   \item{GROUND_DEAD}{Number of dead spawners counted in stream from an observer on the ground}
   \item{GROUND_NEW_DEAD}{Number of newly dead spawners counted in stream from an observer on the ground. KNown to be new if the observer cuts tail off of carcasses after observing.}
   \item{TEMP_C}{Stream temperature measured at time of survey or daily average by a logger}
-  \item{COMMENTS}{COmments realted to data}
+  \item{COMMENTS}{COmments related to data}
   \item{FENCE_PASS}{The number of spawners moving past a counting fence}
   \item{AIR_LIVE}{Number of live spawners counted in stream from an observer in the air - helicopter}
   \item{GROUND_INTERP}{0 or 1 indicating if the GROUND_LIVE data was interpolated for that day}
@@ -32,12 +32,12 @@ A data frame with 145 rows and 9 variables:
 }
 }
 \source{
-Data supplied from R. Millar for Pink salmon and BC government staff in Penticton for Kokanee. PAskey personal copies with .csv files stored in data-raw. data_prep() function in data-raw used to generate .rda file.
+Data supplied from R. Millar for Pink salmon and BC government staff in Penticton for Kokanee. PAskey personal copies with .csv files stored in data-raw. data_prep() function in data-raw combines SPAWNER_COUNTS.csv, Added_)s.cvs, and filters and formats to generate .rda file.
 }
 \usage{
 All_cnts
 }
 \description{
-Visual counts of Kokanee spawners in Okanagan, BC and Pink Salmon spanwers in Alaska.
+Visual counts of Kokanee spawners in British COlumbia and Pink Salmon spawners in Alaska.
 }
 \keyword{datasets}
