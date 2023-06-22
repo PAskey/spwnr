@@ -1,4 +1,4 @@
-#' Visual counts of Kokanee spawners in British COlumbia and Pink Salmon spawners in Alaska.
+#' Visual counts and fence(weir) pass counts of Kokanee spawners in British Columbia and Pink Salmon spawners in Alaska.
 #'
 #'
 #' @format A data frame with 145 rows and 9 variables:
