@@ -1,5 +1,8 @@
 # spwnr
-This package was created to make the raw data and functions available from 'Comparison of known spawner abundance from fence counts to visual counts for simplified spawner estimation methods.' Askey et al. (in review) in the Canadian Journal of Fisheries and Aquatic Sciences.      Includes data comparing visual counts of Kokanee spawners to census data from spawner fences. 
+This package was created to make the raw data and functions available from 'Comparison of known spawner abundance from fence counts to visual counts for simplified spawner estimation methods.' Askey et al. (in review) in the Canadian Journal of Fisheries and Aquatic Sciences.
+
+The package provides open access to the raw data used in the above publication. The Kokanee data are from the Fish and Wildlife branch in Penticton, BC, and provided by the paper authors. The Pink Salmon data were collected y the Alaska Department of Fish and Game, and have been published in several papers: Bue et al. 1998, English et al. (1992), Hilborn et al. (1999), and Millar et al. (2012, 2013). The raw data for the Pinks were provided by R. Millar, University of Aukland (lead author on 2012,2013 papers).
+
 
 # Installation
 Install with devtools package from PAskey github account
@@ -23,11 +26,11 @@ More detailed explanations of the functions below can be founds by typing ?funct
 
 There are currently 2 data sets available as .rda files that were used in the published data analyses: All_cnts and spwnr_ests. Type ?All_cnts for details.
 
-These data sets are accessible in R by simply entering the dataset name ince the package is loaded. To bring the data into the RStudio environment, you can use data() at the prompt
+These data sets are accessible in R by simply entering the dataset name when the package is loaded. To bring the data into the RStudio environment, you can use data() at the prompt.
 
 ```R
 #These data sets are accessible in R by name.
-#To verify which data sets are included in a package use data():
+#To verify which data sets are included in any package use data():
 data(package = "spwnr")
 
 #The data sets are accessible by name. For example to see column names for spwnr_ests dataset:
@@ -44,11 +47,12 @@ The data in the spwnr_ests data set is the summarized data set with 3 different 
 
 ```R
 #Code to create and save first two figures in publication
-#Copy and paste into your console after installing package
+#Copy and paste into your console after installing package as instructed above.
+#Figures will be saved into your working directory.
 
 library(tidyverse)
 library(spwnr)
-setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+
 
 #Kokanee
 All_cnts = spwnr::All_cnts%>%
@@ -100,3 +104,16 @@ ggplot(PK, aes(x = DOY, y = GROUND_LIVE/sc))+
 ggsave(filename = "Figure_2.png", width = 6.5, height = 8.5*.8, dpi = 300, units = "in")
 
 ```
+# References
+
+Bue, B.G., Fried, S.M., Sharr, S., Sharp, D.G., Wilcock, J.A., and Geiger, H.J., 1998. Estimating salmon escapement using the area-under-the-curve, aerial observer efficiency and stream-life estimates: The Prince William Sound pink salmon example, N. Pac. Anadr. Fish Comm. Bull, 1 pp. 240-250.
+
+ English, K.K., Bocking, R.C. and Irvine, J.R., 1992. A robust procedure for estimating salmon escapement based on the area-under-the-curve method. Canadian Journal of Fisheries and Aquatic Sciences, 49(10), pp.1982-1989.
+ 
+ Hilborn, R., Bue, B.G. and Sharr, S., 1999. Estimating spawning escapements from periodic counts: a comparison of methods. Canadian Journal of Fisheries and Aquatic Sciences, 56(5), pp.888-896.
+ 
+ Millar, R.B., McKechnie, S. and Jordan, C.E., 2012. Simple estimators of salmonid escapement and its variance using a new area-under-the-curve method. Canadian journal of fisheries and aquatic sciences, 69(6), pp.1002-1015.
+ 
+  Millar, R.B. and Jordan, C.E., 2013. A simple variance estimator for the trapezoidal area-under-the-curve estimator of the spawner abundance of Pacific salmon. Canadian journal of fisheries and aquatic sciences, 70(8), pp.1231-1239.
+  
+  
