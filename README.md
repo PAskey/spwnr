@@ -29,7 +29,11 @@ There are currently 2 data sets available as .rda files that were used in the pu
 These data sets are accessible in R by simply entering the dataset name when the package is loaded. To bring the data into the RStudio environment, you can use data() at the prompt.
 
 ```R
-#These data sets are accessible in R by name.
+#First make sure pacakge is loaded.
+library(spwnr)
+
+
+#These data sets are accessible in R by name when package is loaded.
 #To verify which data sets are included in any package use data():
 data(package = "spwnr")
 
