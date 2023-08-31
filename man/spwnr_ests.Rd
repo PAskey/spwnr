@@ -3,7 +3,7 @@
 \docType{data}
 \name{spwnr_ests}
 \alias{spwnr_ests}
-\title{A summary of the total number of spawners passing through a counting fence as compared to visual indices of fish days (GAUC and TAUC) and Peak Counts.}
+\title{spwnr_ests}
 \format{
 A data frame with 25 rows and 8 variables:
 \describe{
@@ -21,7 +21,8 @@ A data frame with 25 rows and 8 variables:
 }
 }
 \source{
-Data supplied from R. Millar for Pink salmon and BC government staff in Penticton for Kokanee. PAskey personal copy compiled from .csv files in data-raw. See data_prep.R in data-raw.
+See Askey et al. 2023 Canadian Journal of Fisheries and Aquatic Sciences. Data supplied from R. Millar for Pink salmon and BC government staff in Penticton for Kokanee.
+PAskey personal copy compiled from .csv files in data-raw. See data_prep.R in data-raw.
 }
 \usage{
 spwnr_ests

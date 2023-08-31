@@ -1,7 +1,7 @@
 # spwnr
-This package was created to make the raw data and functions available from 'Comparison of known spawner abundance from fence counts to visual counts for simplified spawner estimation methods.' Askey et al. (in review) in the Canadian Journal of Fisheries and Aquatic Sciences.
+This package was created to make the raw data and functions available from 'Comparison of known spawner abundance from fence counts to visual counts for simplified spawner estimation methods.' Askey et al. (accepted 2023) in the Canadian Journal of Fisheries and Aquatic Sciences.
 
-The package provides open access to the raw data used in the above publication. The Kokanee data are from the Fish and Wildlife branch in Penticton, BC, and provided by the paper authors. The Pink Salmon data were collected y the Alaska Department of Fish and Game, and have been published in several papers: Bue et al. 1998, English et al. (1992), Hilborn et al. (1999), and Millar et al. (2012, 2013). The raw data for the Pinks were provided by R. Millar, University of Aukland (lead author on 2012,2013 papers).
+The package provides open access to the raw data used in the above publication. The Kokanee data are from the Fish and Wildlife branch in Penticton, BC, and provided by the paper authors. The Pink Salmon data were collected by the Alaska Department of Fish and Game, and have been published in several papers: Bue et al. 1998, Hilborn et al. (1999), and Millar et al. (2012, 2013). The raw data for the Pinks were provided by R. Millar, University of Aukland (lead author on 2012,2013 papers).
 
 
 # Installation
@@ -16,13 +16,13 @@ devtools::install_github("PAskey/spwnr").
 ```
 
 # Usage
-The primary objective of this package is to make data available to others, and document code for key functions in the paper: 'Comparison of known spawner abundance from fence counts to visual counts for simplified spawner estimation methods.'
+The primary objective of this package is to make data available, and document code for key functions in the paper: 'Comparison of known spawner abundance from fence counts to visual counts for simplified spawner estimation methods.' Askey et al. (accepted 2023) in the Canadian Journal of Fisheries and Aquatic Sciences.
 
 # Main functions and uses
 
 There are two functions in the package: GAUC() and TAUC(). Each produces an estimate of total fish days based on a series of counts.
 
-More detailed explanations of the functions below can be founds by typing ?function into the R console after the package has been loaded. E.g. ?GAUC. If you want to see the raw source code for any of the functions type View(function name) (e.g. View(GAUC)) or review in the R folder for this package on Github. If you would like to make changes of that code, ideally you go to my Github account to get the source code and create a branch with your potential edits.
+More detailed explanations of the functions below can be founds by typing ?function into the R console after the package has been loaded. E.g. ?GAUC. If you want to see the raw source code for any of the functions type View(function name) (e.g. View(GAUC)) or review in the R folder for this package on Github.
 
 There are currently 2 data sets available as .rda files that were used in the published data analyses: All_cnts and spwnr_ests. Type ?All_cnts for details.
 
@@ -47,7 +47,7 @@ data(spwnr_ests)
 df = spwnr_ests
 
 ```
-The data in the spwnr_ests data set is the summarized data set with 3 different visual indices: PEAK_COUNT, TAUC and GAUC. All explained in Askey et al. in review. The functions to calculate TAUC and GAUC are included in this package. You can delve into data-raw folder on Github to see the raw files and code to crate the two data sets.
+The data in the spwnr_ests data set is the summarized data set with 3 different visual indices: PEAK_COUNT, TAUC and GAUC. All explained in Askey et al. (accepted 2023). The functions to calculate TAUC and GAUC are included in this package. You can delve into data-raw folder on Github to see the raw files and code used to create the two data sets.
 
 ```R
 #Code to create and save first two figures in publication
@@ -110,9 +110,9 @@ ggsave(filename = "Figure_2.png", width = 6.5, height = 8.5*.8, dpi = 300, units
 ```
 # References
 
-Bue, B.G., Fried, S.M., Sharr, S., Sharp, D.G., Wilcock, J.A., and Geiger, H.J., 1998. Estimating salmon escapement using the area-under-the-curve, aerial observer efficiency and stream-life estimates: The Prince William Sound pink salmon example, N. Pac. Anadr. Fish Comm. Bull, 1 pp. 240-250.
+Askey, P.J., Ward, H.G.M., Weir, T., and King, K. (accepted 2023). Canadian Journal of Fish and Aquatic Sciences.
 
- English, K.K., Bocking, R.C. and Irvine, J.R., 1992. A robust procedure for estimating salmon escapement based on the area-under-the-curve method. Canadian Journal of Fisheries and Aquatic Sciences, 49(10), pp.1982-1989.
+Bue, B.G., Fried, S.M., Sharr, S., Sharp, D.G., Wilcock, J.A., and Geiger, H.J., 1998. Estimating salmon escapement using the area-under-the-curve, aerial observer efficiency and stream-life estimates: The Prince William Sound pink salmon example, N. Pac. Anadr. Fish Comm. Bull, 1 pp. 240-250.
  
  Hilborn, R., Bue, B.G. and Sharr, S., 1999. Estimating spawning escapements from periodic counts: a comparison of methods. Canadian Journal of Fisheries and Aquatic Sciences, 56(5), pp.888-896.
  

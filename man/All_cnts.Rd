@@ -3,7 +3,7 @@
 \docType{data}
 \name{All_cnts}
 \alias{All_cnts}
-\title{Visual counts and fence(weir) pass counts of Kokanee spawners in British Columbia and Pink Salmon spawners in Alaska.}
+\title{All_cnts}
 \format{
 A data frame with 145 rows and 9 variables:
 \describe{
@@ -32,7 +32,8 @@ A data frame with 145 rows and 9 variables:
 }
 }
 \source{
-Data supplied from R. Millar for Pink salmon and BC government staff in Penticton for Kokanee. PAskey personal copies with .csv files stored in data-raw. data_prep() function in data-raw combines SPAWNER_COUNTS.csv, Added_)s.cvs, and filters and formats to generate .rda file.
+See Askey et al. 2023 Canadian Journal of Fisheries and Aquatic Sciences. Data supplied from R. Millar for Pink salmon and BC government staff in Penticton for Kokanee.
+ PAskey personal copies with .csv files stored in data-raw. data_prep() function in data-raw combines SPAWNER_COUNTS.csv, Added_0s.cvs, and filters and formats to generate .rda file.
 }
 \usage{
 All_cnts

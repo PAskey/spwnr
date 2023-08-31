@@ -1,5 +1,6 @@
 #' Visual counts and fence(weir) pass counts of Kokanee spawners in British Columbia and Pink Salmon spawners in Alaska.
 #'
+#' @title All_cnts
 #'
 #' @format A data frame with 145 rows and 9 variables:
 #' \describe{
@@ -26,12 +27,13 @@
 #'   \item{KO_sim}{0 or 1 to Subsample of counts to simulate ground counts following Kokanee methods}
 #'
 #' }
-#' @source Data supplied from R. Millar for Pink salmon and BC government staff in Penticton for Kokanee. PAskey personal copies with .csv files stored in data-raw. data_prep() function in data-raw combines SPAWNER_COUNTS.csv, Added_)s.cvs, and filters and formats to generate .rda file.
+#' @source See Askey et al. 2023 Canadian Journal of Fisheries and Aquatic Sciences. Data supplied from R. Millar for Pink salmon and BC government staff in Penticton for Kokanee.
+#'  PAskey personal copies with .csv files stored in data-raw. data_prep() function in data-raw combines SPAWNER_COUNTS.csv, Added_0s.cvs, and filters and formats to generate .rda file.
 "All_cnts"
 
 
 #' A summary of the total number of spawners passing through a counting fence as compared to visual indices of fish days (GAUC and TAUC) and Peak Counts.
-#'
+#' @title spwnr_ests
 #' @name spwnr_ests
 #' @format A data frame with 25 rows and 8 variables:
 #' \describe{
@@ -47,7 +49,8 @@
 #'   \item{fit_group}{Groups of streams for cross-validation analyses}
 #'
 #' }
-#' @source Data supplied from R. Millar for Pink salmon and BC government staff in Penticton for Kokanee. PAskey personal copy compiled from .csv files in data-raw. See data_prep.R in data-raw.
+#' @source See Askey et al. 2023 Canadian Journal of Fisheries and Aquatic Sciences. Data supplied from R. Millar for Pink salmon and BC government staff in Penticton for Kokanee.
+#' PAskey personal copy compiled from .csv files in data-raw. See data_prep.R in data-raw.
 
 "spwnr_ests"
 

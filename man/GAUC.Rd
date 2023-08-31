@@ -9,16 +9,17 @@ GAUC(t, obs, t_ends = NULL, out = "AUC", preds.t = NULL)
 \arguments{
 \item{t}{an ordered time series of count days}
 
-\item{obs}{a series of observed counts of live fish corresponding to each t
-#' @param t_ends a vector of two values to define the first and last day of spawning season to be assigned 0 values.
+\item{obs}{a series of observed counts of live fish corresponding to each t}
+
+\item{t_ends}{a vector of two values to define the first and last day of spawning season to be assigned 0 values.
 These values are not required for GAUC, but can lead to more realistic results when the count data series does not start and end with 0s.}
 
 \item{out}{preferred type of output, default "AUC" = total fish days, "preds" returns the time specific predictions (e.g. for plotting)}
 
-\item{preds.t}{a numeric vector to define predictions t for 'preds' output. Default are the t supplied the GAUC function call.}
+\item{preds.t}{a numeric vector to define predictions t for 'preds' output. Defaults to the t supplied the GAUC function call.}
 }
 \description{
-A function to estimate the GAUC from a time series of spawner counts. See Askey et al. in review CJFAS.
+A function to estimate the GAUC from a time series of spawner counts. See Askey et al. 2023 CJFAS.
 }
 \details{
 This function is used to calculate the number of total fish days based on a series of spawner counts. Assumes the relative number of fish over time follows a Gaussian curve.
@@ -37,7 +38,7 @@ GAUC(t,obs)
 GAUC(t,obs, t_ends = c(263,303))
 #In this Kokanee stream-year the constraints make no difference.
 #However, if we take the Herring 1990 stream year from the Pink Salmon data set we see the effect.
-#Note the All_cnts data set already has assumed 0s intergrate, so we filter those out for the example.
+#Note the All_cnts data set already has assumed 0s integrated, so we filter those out for the example.
 
  t = All_cnts\%>\%dplyr::filter(STREAM =='HERRING', YEAR == 1990, is.na(AIR_LIVE), ADDED_0!=1)\%>\%dplyr::pull(DOY)
  t

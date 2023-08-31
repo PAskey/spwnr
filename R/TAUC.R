@@ -1,4 +1,4 @@
-#' A function to estimate the TAUC from a time series of spawner counts. See Askey et al. in review CJFAS.
+#' A function to estimate the TAUC from a time series of spawner counts. See Askey et al. 2023 CJFAS.
 #'
 #' @details This function is used to calculate the number of total fish days based on a series of spawner counts. Uses the trapezoidal method.
 #'      Requires the first and last observation be 0, and that the observations are sorted by time.
